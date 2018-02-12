@@ -4,10 +4,9 @@ $(document).ready(function(){
 
 	$('.scheme-slider').slick({
 		slidesToShow: 4,
-		autoplay: true,
+		autoplay: false,
 		speed: 500,
 		arrows: false,
-
 	});
 
 	$('.scheme-slider-control--right').click(function(){
@@ -16,6 +15,30 @@ $(document).ready(function(){
 
 	$('.scheme-slider-control--left').click(function(){
 		$(this).closest(".project__el").find(".scheme-slider").slick('slickNext');
+	});
+
+	$('.service-slider').slick({
+		slidesToShow: 1,
+		autoplay: false,
+		speed: 500,
+		arrows: false,
+	});
+
+
+	$('.project__el-slider').slick({
+		slidesToShow: 1,
+		autoplay: true,
+		speed: 2500,
+		arrows: false,
+		fade:true,
+	});
+
+	$('.slider-control--right').click(function(){
+		$(this).closest(".slider-wrap").find(".slider-item").slick('slickNext');
+	});
+
+	$('.slider-control--left').click(function(){
+		$(this).closest(".slider-wrap").find(".slider-item").slick('slickPrev');
 	});
 	/* ###### For only ies  ######*/
 	//if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)){
