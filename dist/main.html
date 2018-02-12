@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<!--create by ANATOLY KUZNETSOV-->
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="format-detection" content="telephone=no" />
+		<!--colors-tabs-->
+		<meta name="theme-color" content="#000" />
+		<meta name="msapplication-navbutton-color" content="#000" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+		<!--icons
+	link(rel="shortcut icon" href="img/fav/favicon.ico")
+	link(rel="apple-touch-icon" sizes="57x57" href="img/fav/apple-touch-icon-57x57.png")
+	link(rel="apple-touch-icon" sizes="60x60" href="img/fav/apple-touch-icon-60x60.png")
+	link(rel="apple-touch-icon" sizes="72x72" href="img/fav/apple-touch-icon-72x72.png")
+	link(rel="apple-touch-icon" sizes="76x76" href="img/fav/apple-touch-icon-76x76.png")
+	link(rel="apple-touch-icon" sizes="114x114" href="img/fav/apple-touch-icon-114x114.png")
+	link(rel="apple-touch-icon" sizes="120x120" href="img/fav/apple-touch-icon-120x120.png")
+	link(rel="apple-touch-icon" sizes="144x144" href="img/fav/apple-touch-icon-144x144.png")
+	link(rel="apple-touch-icon" sizes="152x152" href="img/fav/apple-touch-icon-152x152.png")
+	link(rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon-180x180.png")
+	meta(name="apple-mobile-web-app-capable" content="yes")
+	meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+	meta(name="apple-mobile-web-app-title" content="My App")
+	link(rel="yandex-tableau-widget" href="img/fav/yandex-browser-manifest.json")
+	link(rel="icon" type="image/png" sizes="228x228" href="img/fav/coast-228x228.png")
+	link(rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png")
+	link(rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png")
+	link(rel="manifest" href="img/fav/manifest.json")
+	meta(name="mobile-web-app-capable" content="yes")
+	meta(name="theme-color" content="#020307")
+	meta(name="application-name" content="My App")
+	meta(name="msapplication-TileColor" content="#020307")
+	meta(name="msapplication-TileImage" content="img/fav/mstile-144x144.png")
+	meta(name="msapplication-config" content="img/fav/browserconfig.xml")
+	
+	-->
+		<!--SEO-->
+		<title>Document</title>
+		<meta name="description" itemprop="description" content="" />
+		<link rel="stylesheet" href="css/vendor.css">
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-edit.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" />
+	</head>
+	<!-- mixin nameMixin()-->
+	<!-- - var args = Array.prototype.slice.call(arguments)-->
+	<!-- - for item in args-->
+
+	<body>
+		<div class="header">
+			<div class="main-cont">
+				<div class="header-wrap">
+					<div class="logo">
+						<img src="img/logo-old.png" alt="" />
+					</div>
+					<div class="header-menu">
+						<a class="header-el" href="#">Главная</a>
+						<a class="header-el" href="#">О нас</a>
+						<a class="header-el" href="#">Портфолио</a>
+						<a class="header-el" href="#">Стоимость</a>
+						<a class="header-el" href="#">Статьи</a>
+						<a class="header-el" href="#">Контакты</a>
+					</div>
+					<div class="header-phone">8(926)595-34-62</div>
+				</div>
+			</div>
+		</div>
+		<div class="baner" style="background-image:url('img/bg-rulle.jpg');">
+			<div class="filter--white"></div>
+			<div class="main-cont">
+				<div class="baner-wrap">
+					<div class="baner-text">Проектирование домов под
+						<span>ключ</span>
+					</div>
+					<div class="baner-text-sub">В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов</div>
+					<div class="btn--md-fix btn--red">Подробнее</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="main-cont">
+				<div class="section-title">Наши проекты</div>
+				<div class="section-title-sub">Paradise of ascension will silently shape a further sun.</div>
+				<div class="project">
+					<div class="project__el">
+						<!--.project-el__filter-->
+						<div class="project__el-img-wrap">
+							<div class="project__el-img" style="background-image:url('img/item-1.jpg');"></div>
+							<div class="scheme-slider-wrap">
+								<div class="scheme-slider-cont">
+									<div class="scheme-slider-control scheme-slider-control--left">
+										<svg class="icon">
+											<use xlink:href="#arrow-left"></use>
+										</svg>
+									</div>
+									<div class="scheme-slider-control scheme-slider-control--right">
+										<svg class="icon">
+											<use xlink:href="#arrow-right"></use>
+										</svg>
+									</div>
+									<div class="scheme-slider">
+										<a class="fancybox scheme-slider__el" href="img/scheme-1.jpg" rel="group-elemen" style="background-image:url('img/scheme-1.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-2.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-3.jpg" rel="group-elemen" style="background-image:url('img/scheme-3.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-4.jpg" rel="group-elemen" style="background-image:url('img/scheme-4.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-2.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-3.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-1.jpg" rel="group-elemen" style="background-image:url('img/scheme-4.jpg');"></a>
+									</div>
+								</div>
+							</div>
+							<div class="project__el-descr">
+								<div class="project__el-wrap">
+									<div class="project__el-title">Каркасный дом</div>
+									<div class="project__el-inf">
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Площадь</div>
+											<div class="project__el-inf__val">30м</div>
+										</div>
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Разработка</div>
+											<div class="project__el-inf__val">10 дней</div>
+										</div>
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Гарантия</div>
+											<div class="project__el-inf__val">3 года</div>
+										</div>
+									</div>
+								</div>
+								<div class="project__el-get">
+									<div class="project__el-get-btn">Заказать</div>
+									<div class="project__el-get-btn">Подробнее</div>
+								</div>
+							</div>
+							<!--.project-info
+					.project-el__title Проект нового дома
+					.project-el__text Часто используемый в печати и вэб-дизайне
+					
+					
+					-->
+						</div>
+					</div>
+					<div class="project__el">
+						<!--.project-el__filter-->
+						<div class="project__el-img-wrap">
+							<div class="project__el-img" style="background-image:url('img/item-2.jpg');"></div>
+							<div class="scheme-slider-wrap">
+								<div class="scheme-slider-cont">
+									<div class="scheme-slider-control scheme-slider-control--left">
+										<svg class="icon">
+											<use xlink:href="#arrow-left"></use>
+										</svg>
+									</div>
+									<div class="scheme-slider-control scheme-slider-control--right">
+										<svg class="icon">
+											<use xlink:href="#arrow-right"></use>
+										</svg>
+									</div>
+									<div class="scheme-slider">
+										<a class="fancybox scheme-slider__el" href="img/scheme-1.jpg" rel="group-elemen" style="background-image:url('img/scheme-1.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-2.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-3.jpg" rel="group-elemen" style="background-image:url('img/scheme-3.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-4.jpg" rel="group-elemen" style="background-image:url('img/scheme-4.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-2.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-3.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-1.jpg" rel="group-elemen" style="background-image:url('img/scheme-4.jpg');"></a>
+									</div>
+								</div>
+							</div>
+							<div class="project__el-descr">
+								<div class="project__el-wrap">
+									<div class="project__el-title">Каркасный дом</div>
+									<div class="project__el-inf">
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Площадь</div>
+											<div class="project__el-inf__val">30м</div>
+										</div>
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Разработка</div>
+											<div class="project__el-inf__val">10 дней</div>
+										</div>
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Гарантия</div>
+											<div class="project__el-inf__val">3 года</div>
+										</div>
+									</div>
+								</div>
+								<div class="project__el-get">
+									<div class="project__el-get-btn">Заказать</div>
+									<div class="project__el-get-btn">Подробнее</div>
+								</div>
+							</div>
+							<!--.project-info
+					.project-el__title Проект нового дома
+					.project-el__text Часто используемый в печати и вэб-дизайне
+					
+					
+					-->
+						</div>
+					</div>
+					<div class="project__el">
+						<!--.project-el__filter-->
+						<div class="project__el-img-wrap">
+							<div class="project__el-img" style="background-image:url('img/item-3.jpg');"></div>
+							<div class="scheme-slider-wrap">
+								<div class="scheme-slider-cont">
+									<div class="scheme-slider-control scheme-slider-control--left">
+										<svg class="icon">
+											<use xlink:href="#arrow-left"></use>
+										</svg>
+									</div>
+									<div class="scheme-slider-control scheme-slider-control--right">
+										<svg class="icon">
+											<use xlink:href="#arrow-right"></use>
+										</svg>
+									</div>
+									<div class="scheme-slider">
+										<a class="fancybox scheme-slider__el" href="img/scheme-1.jpg" rel="group-elemen" style="background-image:url('img/scheme-1.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-2.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-3.jpg" rel="group-elemen" style="background-image:url('img/scheme-3.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-4.jpg" rel="group-elemen" style="background-image:url('img/scheme-4.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-2.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-3.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-1.jpg" rel="group-elemen" style="background-image:url('img/scheme-4.jpg');"></a>
+									</div>
+								</div>
+							</div>
+							<div class="project__el-descr">
+								<div class="project__el-wrap">
+									<div class="project__el-title">Каркасный дом</div>
+									<div class="project__el-inf">
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Площадь</div>
+											<div class="project__el-inf__val">30м</div>
+										</div>
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Разработка</div>
+											<div class="project__el-inf__val">10 дней</div>
+										</div>
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Гарантия</div>
+											<div class="project__el-inf__val">3 года</div>
+										</div>
+									</div>
+								</div>
+								<div class="project__el-get">
+									<div class="project__el-get-btn">Заказать</div>
+									<div class="project__el-get-btn">Подробнее</div>
+								</div>
+							</div>
+							<!--.project-info
+					.project-el__title Проект нового дома
+					.project-el__text Часто используемый в печати и вэб-дизайне
+					
+					
+					-->
+						</div>
+					</div>
+					<div class="project__el">
+						<!--.project-el__filter-->
+						<div class="project__el-img-wrap">
+							<div class="project__el-img" style="background-image:url('img/item-4.jpg');"></div>
+							<div class="scheme-slider-wrap">
+								<div class="scheme-slider-cont">
+									<div class="scheme-slider-control scheme-slider-control--left">
+										<svg class="icon">
+											<use xlink:href="#arrow-left"></use>
+										</svg>
+									</div>
+									<div class="scheme-slider-control scheme-slider-control--right">
+										<svg class="icon">
+											<use xlink:href="#arrow-right"></use>
+										</svg>
+									</div>
+									<div class="scheme-slider">
+										<a class="fancybox scheme-slider__el" href="img/scheme-1.jpg" rel="group-elemen" style="background-image:url('img/scheme-1.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-2.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-3.jpg" rel="group-elemen" style="background-image:url('img/scheme-3.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-4.jpg" rel="group-elemen" style="background-image:url('img/scheme-4.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-2.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-3.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-1.jpg" rel="group-elemen" style="background-image:url('img/scheme-4.jpg');"></a>
+									</div>
+								</div>
+							</div>
+							<div class="project__el-descr">
+								<div class="project__el-wrap">
+									<div class="project__el-title">Каркасный дом</div>
+									<div class="project__el-inf">
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Площадь</div>
+											<div class="project__el-inf__val">30м</div>
+										</div>
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Разработка</div>
+											<div class="project__el-inf__val">10 дней</div>
+										</div>
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Гарантия</div>
+											<div class="project__el-inf__val">3 года</div>
+										</div>
+									</div>
+								</div>
+								<div class="project__el-get">
+									<div class="project__el-get-btn">Заказать</div>
+									<div class="project__el-get-btn">Подробнее</div>
+								</div>
+							</div>
+							<!--.project-info
+					.project-el__title Проект нового дома
+					.project-el__text Часто используемый в печати и вэб-дизайне
+					
+					
+					-->
+						</div>
+					</div>
+					<div class="project__el">
+						<!--.project-el__filter-->
+						<div class="project__el-img-wrap">
+							<div class="project__el-img" style="background-image:url('img/item-5.jpg');"></div>
+							<div class="scheme-slider-wrap">
+								<div class="scheme-slider-cont">
+									<div class="scheme-slider-control scheme-slider-control--left">
+										<svg class="icon">
+											<use xlink:href="#arrow-left"></use>
+										</svg>
+									</div>
+									<div class="scheme-slider-control scheme-slider-control--right">
+										<svg class="icon">
+											<use xlink:href="#arrow-right"></use>
+										</svg>
+									</div>
+									<div class="scheme-slider">
+										<a class="fancybox scheme-slider__el" href="img/scheme-1.jpg" rel="group-elemen" style="background-image:url('img/scheme-1.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-2.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-3.jpg" rel="group-elemen" style="background-image:url('img/scheme-3.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-4.jpg" rel="group-elemen" style="background-image:url('img/scheme-4.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-2.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-3.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-1.jpg" rel="group-elemen" style="background-image:url('img/scheme-4.jpg');"></a>
+									</div>
+								</div>
+							</div>
+							<div class="project__el-descr">
+								<div class="project__el-wrap">
+									<div class="project__el-title">Каркасный дом</div>
+									<div class="project__el-inf">
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Площадь</div>
+											<div class="project__el-inf__val">30м</div>
+										</div>
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Разработка</div>
+											<div class="project__el-inf__val">10 дней</div>
+										</div>
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Гарантия</div>
+											<div class="project__el-inf__val">3 года</div>
+										</div>
+									</div>
+								</div>
+								<div class="project__el-get">
+									<div class="project__el-get-btn">Заказать</div>
+									<div class="project__el-get-btn">Подробнее</div>
+								</div>
+							</div>
+							<!--.project-info
+					.project-el__title Проект нового дома
+					.project-el__text Часто используемый в печати и вэб-дизайне
+					
+					
+					-->
+						</div>
+					</div>
+					<div class="project__el">
+						<!--.project-el__filter-->
+						<div class="project__el-img-wrap">
+							<div class="project__el-img" style="background-image:url('img/item-6.jpg');"></div>
+							<div class="scheme-slider-wrap">
+								<div class="scheme-slider-cont">
+									<div class="scheme-slider-control scheme-slider-control--left">
+										<svg class="icon">
+											<use xlink:href="#arrow-left"></use>
+										</svg>
+									</div>
+									<div class="scheme-slider-control scheme-slider-control--right">
+										<svg class="icon">
+											<use xlink:href="#arrow-right"></use>
+										</svg>
+									</div>
+									<div class="scheme-slider">
+										<a class="fancybox scheme-slider__el" href="img/scheme-1.jpg" rel="group-elemen" style="background-image:url('img/scheme-1.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-2.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-3.jpg" rel="group-elemen" style="background-image:url('img/scheme-3.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-4.jpg" rel="group-elemen" style="background-image:url('img/scheme-4.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-2.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-3.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-1.jpg" rel="group-elemen" style="background-image:url('img/scheme-4.jpg');"></a>
+									</div>
+								</div>
+							</div>
+							<div class="project__el-descr">
+								<div class="project__el-wrap">
+									<div class="project__el-title">Каркасный дом</div>
+									<div class="project__el-inf">
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Площадь</div>
+											<div class="project__el-inf__val">30м</div>
+										</div>
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Разработка</div>
+											<div class="project__el-inf__val">10 дней</div>
+										</div>
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Гарантия</div>
+											<div class="project__el-inf__val">3 года</div>
+										</div>
+									</div>
+								</div>
+								<div class="project__el-get">
+									<div class="project__el-get-btn">Заказать</div>
+									<div class="project__el-get-btn">Подробнее</div>
+								</div>
+							</div>
+							<!--.project-info
+					.project-el__title Проект нового дома
+					.project-el__text Часто используемый в печати и вэб-дизайне
+					
+					
+					-->
+						</div>
+					</div>
+					<div class="project__el">
+						<!--.project-el__filter-->
+						<div class="project__el-img-wrap">
+							<div class="project__el-img" style="background-image:url('img/item-7.jpg');"></div>
+							<div class="scheme-slider-wrap">
+								<div class="scheme-slider-cont">
+									<div class="scheme-slider-control scheme-slider-control--left">
+										<svg class="icon">
+											<use xlink:href="#arrow-left"></use>
+										</svg>
+									</div>
+									<div class="scheme-slider-control scheme-slider-control--right">
+										<svg class="icon">
+											<use xlink:href="#arrow-right"></use>
+										</svg>
+									</div>
+									<div class="scheme-slider">
+										<a class="fancybox scheme-slider__el" href="img/scheme-1.jpg" rel="group-elemen" style="background-image:url('img/scheme-1.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-2.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-3.jpg" rel="group-elemen" style="background-image:url('img/scheme-3.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-4.jpg" rel="group-elemen" style="background-image:url('img/scheme-4.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-2.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-3.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-1.jpg" rel="group-elemen" style="background-image:url('img/scheme-4.jpg');"></a>
+									</div>
+								</div>
+							</div>
+							<div class="project__el-descr">
+								<div class="project__el-wrap">
+									<div class="project__el-title">Каркасный дом</div>
+									<div class="project__el-inf">
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Площадь</div>
+											<div class="project__el-inf__val">30м</div>
+										</div>
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Разработка</div>
+											<div class="project__el-inf__val">10 дней</div>
+										</div>
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Гарантия</div>
+											<div class="project__el-inf__val">3 года</div>
+										</div>
+									</div>
+								</div>
+								<div class="project__el-get">
+									<div class="project__el-get-btn">Заказать</div>
+									<div class="project__el-get-btn">Подробнее</div>
+								</div>
+							</div>
+							<!--.project-info
+					.project-el__title Проект нового дома
+					.project-el__text Часто используемый в печати и вэб-дизайне
+					
+					
+					-->
+						</div>
+					</div>
+					<div class="project__el">
+						<!--.project-el__filter-->
+						<div class="project__el-img-wrap">
+							<div class="project__el-img" style="background-image:url('img/item-8.jpg');"></div>
+							<div class="scheme-slider-wrap">
+								<div class="scheme-slider-cont">
+									<div class="scheme-slider-control scheme-slider-control--left">
+										<svg class="icon">
+											<use xlink:href="#arrow-left"></use>
+										</svg>
+									</div>
+									<div class="scheme-slider-control scheme-slider-control--right">
+										<svg class="icon">
+											<use xlink:href="#arrow-right"></use>
+										</svg>
+									</div>
+									<div class="scheme-slider">
+										<a class="fancybox scheme-slider__el" href="img/scheme-1.jpg" rel="group-elemen" style="background-image:url('img/scheme-1.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-2.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-3.jpg" rel="group-elemen" style="background-image:url('img/scheme-3.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-4.jpg" rel="group-elemen" style="background-image:url('img/scheme-4.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-2.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-3.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-1.jpg" rel="group-elemen" style="background-image:url('img/scheme-4.jpg');"></a>
+									</div>
+								</div>
+							</div>
+							<div class="project__el-descr">
+								<div class="project__el-wrap">
+									<div class="project__el-title">Каркасный дом</div>
+									<div class="project__el-inf">
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Площадь</div>
+											<div class="project__el-inf__val">30м</div>
+										</div>
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Разработка</div>
+											<div class="project__el-inf__val">10 дней</div>
+										</div>
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Гарантия</div>
+											<div class="project__el-inf__val">3 года</div>
+										</div>
+									</div>
+								</div>
+								<div class="project__el-get">
+									<div class="project__el-get-btn">Заказать</div>
+									<div class="project__el-get-btn">Подробнее</div>
+								</div>
+							</div>
+							<!--.project-info
+					.project-el__title Проект нового дома
+					.project-el__text Часто используемый в печати и вэб-дизайне
+					
+					
+					-->
+						</div>
+					</div>
+					<div class="project__el">
+						<!--.project-el__filter-->
+						<div class="project__el-img-wrap">
+							<div class="project__el-img" style="background-image:url('img/item-9.jpg');"></div>
+							<div class="scheme-slider-wrap">
+								<div class="scheme-slider-cont">
+									<div class="scheme-slider-control scheme-slider-control--left">
+										<svg class="icon">
+											<use xlink:href="#arrow-left"></use>
+										</svg>
+									</div>
+									<div class="scheme-slider-control scheme-slider-control--right">
+										<svg class="icon">
+											<use xlink:href="#arrow-right"></use>
+										</svg>
+									</div>
+									<div class="scheme-slider">
+										<a class="fancybox scheme-slider__el" href="img/scheme-1.jpg" rel="group-elemen" style="background-image:url('img/scheme-1.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-2.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-3.jpg" rel="group-elemen" style="background-image:url('img/scheme-3.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-4.jpg" rel="group-elemen" style="background-image:url('img/scheme-4.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-2.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-3.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg');"></a>
+										<a class="fancybox scheme-slider__el" href="img/scheme-1.jpg" rel="group-elemen" style="background-image:url('img/scheme-4.jpg');"></a>
+									</div>
+								</div>
+							</div>
+							<div class="project__el-descr">
+								<div class="project__el-wrap">
+									<div class="project__el-title">Каркасный дом</div>
+									<div class="project__el-inf">
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Площадь</div>
+											<div class="project__el-inf__val">30м</div>
+										</div>
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Разработка</div>
+											<div class="project__el-inf__val">10 дней</div>
+										</div>
+										<div class="project__el-inf__el">
+											<div class="project__el-inf__name">Гарантия</div>
+											<div class="project__el-inf__val">3 года</div>
+										</div>
+									</div>
+								</div>
+								<div class="project__el-get">
+									<div class="project__el-get-btn">Заказать</div>
+									<div class="project__el-get-btn">Подробнее</div>
+								</div>
+							</div>
+							<!--.project-info
+					.project-el__title Проект нового дома
+					.project-el__text Часто используемый в печати и вэб-дизайне
+					
+					
+					-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section section-about" style="background-image:url('img/img-5.jpg');">
+			<div class="filter"></div>
+			<div class="main-cont">
+				<div class="about-info">
+					<div class="about-title">Что мы делаем</div>
+					<div class="about-text">это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem
+						Ipsum для распечатки образцов. Lorem Ipsum не только успешно</div>
+					<div class="btn--md-fix btn--mark">Подробнее</div>
+				</div>
+			</div>
+		</div>
+		<div class="section section-advant">
+			<div class="main-cont">
+				<div class="section-title">Наши преимущества</div>
+				<div class="section-title-sub">Paradise of ascension will silently shape a further sun.</div>
+				<div class="advant">
+					<div class="advant__el">
+						<div class="advant__el-icon">
+							<svg class="icon">
+								<use xlink:href="#city"></use>
+							</svg>
+						</div>
+						<div class="advant__el-text">Давно выяснено, что при оценке дизайна и композиции</div>
+					</div>
+					<div class="advant__el">
+						<div class="advant__el-icon">
+							<svg class="icon">
+								<use xlink:href="#prize"></use>
+							</svg>
+						</div>
+						<div class="advant__el-text">Многие программы электронной вёрстки и редакторы HTML</div>
+					</div>
+					<div class="advant__el">
+						<div class="advant__el-icon">
+							<svg class="icon">
+								<use xlink:href="#insurance"></use>
+							</svg>
+						</div>
+						<div class="advant__el-text">Есть много вариантов Lorem Ipsum, но большинство из них имеет</div>
+					</div>
+					<div class="advant__el">
+						<div class="advant__el-icon">
+							<svg class="icon">
+								<use xlink:href="#house-1"></use>
+							</svg>
+						</div>
+						<div class="advant__el-text">Многие думают, что Lorem Ipsum - взятый с потолка</div>
+					</div>
+					<div class="advant__el">
+						<div class="advant__el-icon">
+							<svg class="icon">
+								<use xlink:href="#sketch"></use>
+							</svg>
+						</div>
+						<div class="advant__el-text">Lorem Ipsum, "consectetur", и занялся его поисками в классической</div>
+					</div>
+					<div class="advant__el">
+						<div class="advant__el-icon">
+							<svg class="icon">
+								<use xlink:href="#house"></use>
+							</svg>
+						</div>
+						<div class="advant__el-text">Он использует словарь из более чем 200 латинских</div>
+					</div>
+					<div class="advant__el">
+						<div class="advant__el-icon">
+							<svg class="icon">
+								<use xlink:href="#coins"></use>
+							</svg>
+						</div>
+						<div class="advant__el-text">Его популяризации в новое время послужили публикация</div>
+					</div>
+					<div class="advant__el">
+						<div class="advant__el-icon">
+							<svg class="icon">
+								<use xlink:href="#settings"></use>
+							</svg>
+						</div>
+						<div class="advant__el-text">В то время некий безымянный печатник создал послужили публикация</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section section-news" style="background-image:url('img/img-2.jpg');">
+			<div class="filter filter--white"></div>
+			<div class="main-cont">
+				<div class="section-title">Наши Новости</div>
+				<div class="section-title-sub">Paradise of ascension will silently shape a further sun.</div>
+				<div class="news">
+					<div class="news__el">
+						<div class="news__el-title">Многие программы электронной</div>
+						<div class="news__el-text">Спрос на строительство каркасных домов в последние несколько лет активно набирает обороты, это связано с потребностью ускоренного заселения в новый дом. Активный ритм современного человека и жизненные ситуации порой не позволяют медлить с заселением
+							или отложить отдых на новой даче загородом. Дом построенный из бревна или бруса,</div>
+					</div>
+					<div class="news__el">
+						<div class="news__el-title">Многие программы электронной</div>
+						<div class="news__el-text">Спрос на строительство каркасных домов в последние несколько лет активно набирает обороты, это связано с потребностью ускоренного заселения в новый дом. Активный ритм современного человека и жизненные ситуации порой не позволяют медлить с заселением
+							или отложить отдых на новой даче загородом. Дом построенный из бревна или бруса,</div>
+					</div>
+					<div class="news__el">
+						<div class="news__el-title">Многие программы электронной</div>
+						<div class="news__el-text">Спрос на строительство каркасных домов в последние несколько лет активно набирает обороты, это связано с потребностью ускоренного заселения в новый дом. Активный ритм современного человека и жизненные ситуации порой не позволяют медлить с заселением
+							или отложить отдых на новой даче загородом. Дом построенный из бревна или бруса,</div>
+					</div>
+					<div class="news__el">
+						<div class="news__el-title">Многие программы электронной</div>
+						<div class="news__el-text">Спрос на строительство каркасных домов в последние несколько лет активно набирает обороты, это связано с потребностью ускоренного заселения в новый дом. Активный ритм современного человека и жизненные ситуации порой не позволяют медлить с заселением
+							или отложить отдых на новой даче загородом. Дом построенный из бревна или бруса,</div>
+					</div>
+					<div class="news__el">
+						<div class="news__el-title">Многие программы электронной</div>
+						<div class="news__el-text">Спрос на строительство каркасных домов в последние несколько лет активно набирает обороты, это связано с потребностью ускоренного заселения в новый дом. Активный ритм современного человека и жизненные ситуации порой не позволяют медлить с заселением
+							или отложить отдых на новой даче загородом. Дом построенный из бревна или бруса,</div>
+					</div>
+					<div class="news__el">
+						<div class="news__el-title">Многие программы электронной</div>
+						<div class="news__el-text">Спрос на строительство каркасных домов в последние несколько лет активно набирает обороты, это связано с потребностью ускоренного заселения в новый дом. Активный ритм современного человека и жизненные ситуации порой не позволяют медлить с заселением
+							или отложить отдых на новой даче загородом. Дом построенный из бревна или бруса,</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section section-price">
+			<div class="main-cont">
+				<div class="section-title">Цены на наши услуги</div>
+				<div class="section-title-sub">Paradise of ascension will silently shape a further sun.</div>
+				<div class="price">
+					<div class="price__el">
+						<div class="price__title">ЭСКИЗНЫЙ ПРОЕКТ</div>
+						<!--.price__imgimg(src="img/service-2.jpg", alt="")
+				-->
+						<div class="price__price">от
+							<span>200</span>руб</div>
+						<div class="price__list">
+							<div class="price__list-el">Планы этажей</div>
+							<div class="price__list-el">Характерные разрезы дома</div>
+							<div class="price__list-el">Фасады дома</div>
+							<div class="price__list-el">План кровли</div>
+							<div class="price__list-el">Генеральный план участка или Схема</div>
+							<div class="price__list-el">Визуализация внешнего вида дома</div>
+						</div>
+						<div class="price__get">Заказать</div>
+					</div>
+					<div class="price__el">
+						<div class="price__title">ЭСКИЗНЫЙ ПРОЕКТ</div>
+						<!--.price__imgimg(src="img/service-2.jpg", alt="")
+				-->
+						<div class="price__price">от
+							<span>200</span>руб</div>
+						<div class="price__list">
+							<div class="price__list-el">Планы этажей</div>
+							<div class="price__list-el">Характерные разрезы дома</div>
+							<div class="price__list-el">Фасады дома</div>
+							<div class="price__list-el">План кровли</div>
+							<div class="price__list-el">Генеральный план участка или Схема</div>
+							<div class="price__list-el">Визуализация внешнего вида дома</div>
+						</div>
+						<div class="price__get">Заказать</div>
+					</div>
+					<div class="price__el">
+						<div class="price__title">ЭСКИЗНЫЙ ПРОЕКТ</div>
+						<!--.price__imgimg(src="img/service-2.jpg", alt="")
+				-->
+						<div class="price__price">от
+							<span>200</span>руб</div>
+						<div class="price__list">
+							<div class="price__list-el">Планы этажей</div>
+							<div class="price__list-el">Характерные разрезы дома</div>
+							<div class="price__list-el">Фасады дома</div>
+							<div class="price__list-el">План кровли</div>
+							<div class="price__list-el">Генеральный план участка или Схема</div>
+							<div class="price__list-el">Визуализация внешнего вида дома</div>
+						</div>
+						<div class="price__get">Заказать</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/combined.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/script-edit.js"></script>
+	</body>
+
+</html>
