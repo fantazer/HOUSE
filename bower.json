@@ -22,6 +22,8 @@
   },
   "devDependencies": {
     "slick-carousel": "^1.8.1",
-    "fancybox": "^3.2.5"
+    "fancybox": "^3.2.5",
+    "page-scroll-to-id": "^1.5.8",
+    "perfect-scrollbar": "^0.8.1"
   }
 }

@@ -229,19 +229,18 @@ body
 
 .section-about
 	position: relative
-	padding: 250px 0
-	bg-full()
+	padding: 150px 0
 .about-title
 	up()
 	margin-bottom: 40px
 	font-weight: 900
 	font-size: 68px
-	color white
+	//color white
 
 .about-text
-	color white
+	//color white
 	line-height: 1.6
-	width: 50%
+	width: 70%
 	margin-bottom: 40px
 
 .advant
@@ -304,12 +303,14 @@ body
 
 
 .price
+	center(1000px,0)
 	flex(between)
 .price__el
-	width: 32%
+	width: 45%
 	padding: 40px 20px
 	border 1px solid $border-color
 	br(10px)
+	padding-right: 10px
 .price__title
 	text-align: center
 	font-size: 24px
@@ -380,7 +381,7 @@ body
 	position: relative
 
 .section-service
-	padding-top: 0
+	padding-top: 40px
 .service-title
 	font-weight: 900
 	font-size: 28px
@@ -454,6 +455,40 @@ body
 		display: inline-block
 		margin: 0 10px
 
+.about-text__more
+	display: none
+
+.section-project
+	padding-top: 40px
+
+.price__list
+	position: relative
+	height: 300px
+	padding-right: 30px
+.ps__scrollbar-y-rail
+	background-color #eaeaea !important
+	opacity 1!important
+
+.ps > .ps__scrollbar-y-rail:hover > .ps__scrollbar-y, .ps > .ps__scrollbar-y-rail:active > .ps__scrollbar-y
+	width: 10px
+.ps > .ps__scrollbar-y-rail
+	width: 10px
+	background-color #f6f6f6!important
+	opacity 1!important
+
+.section-advant
+	padding-bottom: 0
+
+.price-more
+	flex(mid)
+	margin-top: 20px
+	.icon
+		size 25px
+		margin-right: 10px
+.price-more__icon
+	flex(mid)
+.price-more__text
+	color black
 //.price__price
 //.price__list
 //.price__list-el
