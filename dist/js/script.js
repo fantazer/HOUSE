@@ -1,4 +1,19 @@
+(function($){
+    $(window).load(function(){
+        $("a[rel='m_PageScroll2id']").mPageScroll2id({
+				    highlightClass:"left-nav-el-active",
+				    onComplete:function(){
+				    	$('.header-navs').hide();
+				    }
+				});
+    });
+ })(jQuery);
+
 $(document).ready(function(){
+
+	// template scrollbar
+	$('.price__list').perfectScrollbar()
+	// template scrollbar === end
 
 	$(".fancybox").fancybox();
 
@@ -40,6 +55,20 @@ $(document).ready(function(){
 	$('.slider-control--left').click(function(){
 		$(this).closest(".slider-wrap").find(".slider-item").slick('slickPrev');
 	});
+
+	//slide toggle more text about
+	$('.toggle-about').click(function(){
+		$('.about-text__more').slideToggle(function(){
+			if($('.toggle-about').text()== "Подробнее"){
+				$('.toggle-about').text("Скрыть")
+			} else {
+				$('.toggle-about').text("Подробнее")
+			}
+		});
+	});
+	//slide toggle more text about===end
+
+
 	/* ###### For only ies  ######*/
 	//if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)){
 	//	//code
