@@ -493,3 +493,326 @@ body
 //.price__list
 //.price__list-el
 //.price__get
+
+.contact-form
+	+below(768px)
+		margin-top: 0px
+	padding: 50px 0
+	margin-top: 100px
+	form
+		+below(768px)
+			fl()
+		f()
+		justify-content: space-between
+		width: 100%
+	background: #f1f1f1
+	.input-row
+		width: 100%
+		input
+			+below(768px)
+				width: 100%
+				margin-bottom: 20px
+			width: 90%
+			margin-bottom: 0
+	.modal-send
+		+below(768px)
+			width: 100%
+		margin-bottom: 0
+		width: 100%
+	.section-title-sub
+		margin-bottom: 30px
+
+
+
+.section-contact
+	background #efefef
+.contact
+	form
+		width 100%
+	textarea
+		width 100%
+	.main-form
+		padding 40px
+		border 1px solid #e3e3e3
+.contact-form--footer
+	+below(768px)
+		fw()
+		margin-top 30px
+	flex(between)
+	align-items flex-start
+	margin-top 80px
+	.main-form
+		+below(768px)
+			width 100%
+			margin-bottom 20px
+			padding 30px 20px
+		width 40%
+.main-form
+	background: white
+.contact-info
+	+below(768px)
+		width 100%
+	width 55%
+	background: white
+.map
+	+below(768px)
+		margin-bottom: 10px
+	margin-bottom 40px
+.contact-row
+	flex(mid)
+	margin-bottom 20px
+	.icon
+		margin-right 20px
+		+below(768px)
+			size 20px
+		size 30px
+		fill $green
+.contact-text
+	+below(768px)
+		font-size 12px
+		width 100%
+	font-size 16px
+	line-height:1.6
+	width 60%
+
+.form-title
+	+below(1200px)
+		font-size 16px
+	up()
+	text-align center
+	font-size 24px
+	font-weight bold
+	color black
+	margin-bottom: 20px
+.form-title-sub
+	+below(768px)
+		font-size: 10px
+		margin-bottom: 20px
+	font-size 16px
+	margin-bottom: 40px
+	text-align: center
+.form-month
+	up()
+	font-weight bold
+	font-size 32px
+	margin-bottom 30px
+.form-foter-text
+	+below(1200px)
+		font-size 12px
+	text-align center
+	color grey
+
+.contact-form--footer
+	form
+		fl()
+	align-items: stretch
+	margin-top: 0
+	padding-top: 0
+
+.form--footer
+	.input-row
+		+below(768px)
+			margin-bottom: 0px
+		width: 100%
+		margin-bottom: 30px
+		input
+			width: 100%
+
+
+.contact-row-wrap
+	+below(768px)
+		padding: 20px
+	padding: 20px 40px
+
+.modal-layer
+	width: 100%
+	height: 100vh
+	position: fixed
+	z-index 1000
+	top 0
+	left 0
+	visibility: hidden
+	transition all 1s // duration for fade
+	opacity 0
+
+.modal-layer-show
+	visibility: visible
+	opacity 1
+
+.modal-cont
+	width: 100%
+	height: 100%
+	position: relative
+	max-height 100%
+	overflow: auto
+
+.modal-filter
+	+below(640px)
+		background: white
+	position: absolute
+	top: 0
+	left: 0
+	background: rgba(0, 0, 0, 0.6)
+	width: 100%
+	height: 100vh
+	min-height 100vh
+
+.modal
+	+below(768px)
+		width: 100%
+		box-shadow 0 0 0
+	box-shadow 0 2px 4px rgba(0, 0, 0, 0.24)
+	transform translate(-50%,-350%)
+	position: absolute
+	top 50%
+	left 50%
+	opacity .1
+	transition transform .8s, opacity 1s
+	max-width 550px
+
+.modal-content
+	+below(768px)
+		padding: 20px
+	+below(640px)
+		max-height calc(100vh - 60px)
+		overflow-y scroll
+		padding: 20px 5px
+		width: 100%!important
+	//background: #2b8850
+	background: white
+	position: relative
+	padding: 40px
+	+below(768px)
+		width: 80%
+
+.modal-content--register
+	width: 500px
+	input
+		width: 100%
+		margin-bottom: 20px
+
+.modal__show
+	+below(768px)
+		flex(mid)
+	opacity 1
+	transform translate(-50%,-50%)
+
+.modal-close
+	+below(768px)
+		top 15px
+		right 15px
+	position: absolute
+	top: 20px
+	right: 20px
+	cp()
+	.icon
+		+below(768px)
+			size 15px
+		size 20px
+
+.modal-open
+	overflow: hidden
+	overflow-x: hidden
+	overflow-y: scroll
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+
+.modal-wrap
+	position: relative
+	height: 100%
+
+.modal-title
+	+below(768px)
+		font-size: 20px
+	@extend .type--lg
+	margin-bottom: 0px
+	text-align: center
+	//color white
+	color black
+	font-size: 32px
+
+.modal-text
+	+below(768px)
+		width: 100%
+		font-size: 12px
+	text-align: center
+	margin: 20px auto 40px auto
+	//width: 80%
+	font-size: 16px
+	line-height: 1.2
+	color #5f5f5f
+
+.validate-form
+	input,textarea
+		width: 100%
+		margin-bottom: 20px
+
+.modal-send
+	@extend .btn--md
+	@extend .btn--mark
+	border 0
+	width: 100%
+	font-weight: 600
+	padding: 15px
+	font-size: 16px
+	&:hover
+		box-shadow 0 9px 18px rgb(76, 72, 19)
+
+.agree-row
+	f()
+	align-items: center
+	margin:10px 0 30px 0
+	a
+		text-decoration: underline
+		display: inline-block
+
+.agree-row__text
+	width: 100%
+	color black
+	font-size: 12px
+	a
+		color #9c9a9a
+		text-decoration: none
+.field-error
+	.error
+		display: none!important
+
+.field-error
+	input
+		border 1px solid #dc3d3d
+.style-label--checkbox.field-error
+	.sytle-input-element
+		border 1px solid #dc3d3d
+
+.scroll-up
+	+below(768px)
+		size 40px
+	flex(mid)
+	round()
+	cp()
+	tr(all)
+	position: fixed
+	z-index 15
+	bottom 20%
+	right 5%
+	border 1px solid $border-color
+	size 64px
+	opacity 0
+	background: white
+	&:hover
+		background: black
+		.icon
+			fill white
+	.icon
+		+below(768px)
+			size 15px
+		size 30px
+		fill black
+
+.scroll-up--show
+	opacity 1
+

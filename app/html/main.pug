@@ -69,7 +69,7 @@ include block_html/_include.pug
 									.project__el-inf__name Гарантия
 									.project__el-inf__val 3 года
 						.project__el-get
-							.project__el-get-btn Заказать
+							.project__el-get-btn.modal-get(data-modal="order") Заказать
 							.project__el-get-btn Подробнее
 
 
@@ -111,7 +111,7 @@ include block_html/_include.pug
 									.project__el-inf__name Гарантия
 									.project__el-inf__val 3 года
 						.project__el-get
-							.project__el-get-btn Заказать
+							.project__el-get-btn.modal-get(data-modal="order") Заказать
 							.project__el-get-btn Подробнее
 
 
@@ -155,7 +155,7 @@ include block_html/_include.pug
 										.project__el-inf__name Гарантия
 										.project__el-inf__val 3 года
 							.project__el-get
-								.project__el-get-btn Заказать
+								.project__el-get-btn.modal-get(data-modal="order") Заказать
 								.project__el-get-btn Подробнее
 
 
@@ -203,7 +203,7 @@ include block_html/_include.pug
 						.price__list-el  Фасады дома с узлами и фрагментами.
 						.price__list-el  Ведомость материалов
 						.price__list-el  Консультация по выбору технологий строительства дома
-					.price__get Заказать
+					.price__get.modal-get(data-modal="order") Заказать
 
 .section.section-service#kp
 	.main-cont
@@ -253,7 +253,7 @@ include block_html/_include.pug
 						.price__list-el Сечение по цоколю
 						.price__list-el Ведомость деталей
 						.price__list-el Специальные указания и рекомендации по возведению конструкций.
-					.price__get Заказать
+					.price__get.modal-get(data-modal="order") Заказать
 
 //.section.section-about(style="background-image:url('https://www.toptal.com/designers/subtlepatterns/patterns/ep_naturalblack.png)')")
 .section.section-about(style="background-image:url('https://www.toptal.com/designers/subtlepatterns/patterns/concrete-texture.png)')")
@@ -420,7 +420,7 @@ include block_html/_include.pug
 					.price__list-el  Фасады дома с узлами и фрагментами.
 					.price__list-el  Ведомость материалов
 					.price__list-el  Консультация по выбору технологий строительства дома
-				.price__get Заказать
+				.price__get.modal-get(data-modal="order") Заказать
 				a(href="#arch" rel='m_PageScroll2id').price-more
 					.price-more__icon
 						+icon("eye","icon")
@@ -454,9 +454,94 @@ include block_html/_include.pug
 					.price__list-el Сечение по цоколю
 					.price__list-el Ведомость деталей
 					.price__list-el Специальные указания и рекомендации по возведению конструкций.
-				.price__get Заказать
+				.price__get.modal-get(data-modal="order") Заказать
 				a(href="#kp" rel='m_PageScroll2id').price-more
 					.price-more__icon
 						+icon("eye","icon")
 					.price-more__text Пример отчета
+
+.section-contact
+	#contact.section.section-contact
+		.main-cont
+			.section-title Наши контакты
+			.section-title-sub Оформите обращение с помощью этой формы, мы перезвоним <br>Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!
+			.contact
+				.contact-form.contact-form--footer
+					.main-form
+						.form-title Оставьте вашу заявку
+						.form-title-sub Мы свяжемся с вам в кратчайшее время
+						form.validate-form.form--footer( action="javascript:void(null);")
+							.input-row
+								input(type="text" name="name" placeholder="Ваше имя").input
+							.input-row
+								input(type="text" name="phone" placeholder="Ваш телефон").input
+							.input-row
+								textarea(name="info", cols="30", rows="5" placeholder="Сообщение").input
+							.agree-row
+								.check-el
+									label.style-label.style-label--checkbox
+										input(type="checkbox" name="agree").sytle-input
+										.sytle-input-element
+											+icon("checked","icon-check")
+										.sytle-input-text=text
+								.agree-row__text Согласен с
+									a(href="#") условиями обработки персональных данных
+							input(type="submit" value="Отправить заявку").form-footer-send.modal-send
+					.contact-info
+						.map
+							script("text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A104108c83896b1a6c1b544e50f3d690ee4df2f43b13730f0b9a6f0d5ead96cae&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=false")
+
+						.contact-row-wrap
+							.contact-row
+								.contact-icon
+									+icon("placeholder","icon")
+								.contact-text Москва, 1-ый Варшавский мой адрес
+							.contact-row
+								.contact-icon
+									+icon("phone-call","icon")
+								.contact-text +7 (495) 123-12-22
+							.contact-row
+								.contact-icon
+									+icon("mail","icon")
+								.contact-text info@pochta.ru
+	//section-contact-end
+
+
+
+	.scroll-up
+		+icon("arrow-up","icon")
+
+	.modal-layer
+		.modal-cont
+			.modal-filter
+			.modal-wrap
+				.modal(data-modal="order")
+					.modal-content.modal-content--fogot
+						.modal-close
+							+icon("close","icon")
+						.modal-title Оставьте заявку
+						.modal-text Обращаетесь к нам впервые? <br> Оформите обращение с помощью этой формы, мы перезвоним Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!
+						form.validate-form( action="javascript:void(null);")
+							.input-row
+								input(type="text" name="name" placeholder="Ваше имя").input
+							.input-row
+								input(type="text" name="phone" placeholder="Ваш телефон").input
+							.input-row
+								textarea(name="info", cols="30", rows="5" placeholder="Сообщение").input
+							.agree-row
+								.check-el
+									label.style-label.style-label--checkbox
+										input(type="checkbox" name="agree").sytle-input
+										.sytle-input-element
+											+icon("checked","icon-check")
+										.sytle-input-text=text
+								.agree-row__text Согласен с
+									a(href="#") условиями обработки персональных данных
+							input(type="submit" value="Отправить заявку").modal-send
+
+				.modal(data-modal="true")
+					.modal-content.modal-content--true
+						+icon("interface","icon")
+						.modal-text-true Ваша заявка принята
+
 include ./block_html/_script.pug
