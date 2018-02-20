@@ -32,6 +32,8 @@ include block_html/_include.pug
 		.section-title Наши проекты
 		.section-title-sub Paradise of ascension will silently shape a further sun.
 		.project
+
+			//standart
 			.project__el
 				//.project-el__filter
 				.project__el-img-wrap
@@ -64,16 +66,14 @@ include block_html/_include.pug
 									.project__el-inf__val 250 м <sup>2</sup>
 								.project__el-inf__el
 									.project__el-inf__name Комнат
-									.project__el-inf__val 5 шт.
+									.project__el-inf__val 5
 								.project__el-inf__el
 									.project__el-inf__name Разработка
 									.project__el-inf__val 1.5 месяца
 						.project__el-get
 							.project__el-get-btn.modal-get(data-modal="order") Заказать
-							.project__el-get-btn Подробнее
 
-
-
+			//rubl
 			.project__el
 				//.project-el__filter
 				.project__el-img-wrap
@@ -99,73 +99,103 @@ include block_html/_include.pug
 									img(src="img/wood/wood-pr-1-4.jpg", alt="")
 					.project__el-descr
 						.project__el-wrap
-							.project__el-title Каркасный дом
+							.project__el-title Рубленный
 							.project__el-inf
 								.project__el-inf__el
 									.project__el-inf__name Площадь
 									.project__el-inf__val 300 м <sup>2</sup>
 								.project__el-inf__el
 									.project__el-inf__name Комнат
-									.project__el-inf__val 7 шт.
+									.project__el-inf__val 7
 								.project__el-inf__el
 									.project__el-inf__name Разработка
 									.project__el-inf__val 2 месяца
 						.project__el-get
 							.project__el-get-btn.modal-get(data-modal="order") Заказать
-							.project__el-get-btn Подробнее
 
+			//Райта
+			.project__el
+				//.project-el__filter
+				.project__el-img-wrap
+					.project__el-slider
+						.project__el-img(style="background-image:url('img/raita/raita-1-1.jpg')")
+						.project__el-img(style="background-image:url('img/raita/raita-1-2.jpg')")
+						.project__el-img(style="background-image:url('img/raita/raita-1-3.jpg')")
+						.project__el-img(style="background-image:url('img/raita/raita-1-4.jpg')")
+					.scheme-slider-wrap
+						.scheme-slider-cont
+							.scheme-slider-control.scheme-slider-control--left
+								+icon("arrow-left","icon")
+							.scheme-slider-control.scheme-slider-control--right
+								+icon("arrow-right","icon")
+							.scheme-slider
+								- for (var i=0;i<2;i++)
+								a(href="img/raita/raita-pr-1-1.jpg" rel="group-elemen").fancybox.scheme-slider__el
+									img(src="img/raita/raita-pr-1-1.jpg", alt="")
+								a(href="img/raita/raita-pr-1-2.jpg" rel="group-elemen").fancybox.scheme-slider__el
+									img(src="img/raita/raita-pr-1-2.jpg", alt="")
+								a(href="img/raita/raita-pr-1-3.jpg" rel="group-elemen").fancybox.scheme-slider__el
+									img(src="img/raita/raita-pr-1-3.jpg", alt="")
+								a(href="img/raita/raita-pr-1-4.jpg" rel="group-elemen").fancybox.scheme-slider__el
+									img(src="img/raita/raita-pr-1-4.jpg", alt="")
+					.project__el-descr
+						.project__el-wrap
+							.project__el-title Райта
+							.project__el-inf
+								.project__el-inf__el
+									.project__el-inf__name Площадь
+									.project__el-inf__val 300 м <sup>2</sup>
+								.project__el-inf__el
+									.project__el-inf__name Комнат
+									.project__el-inf__val 7
+								.project__el-inf__el
+									.project__el-inf__name Разработка
+									.project__el-inf__val 2 месяца
+						.project__el-get
+							.project__el-get-btn.modal-get(data-modal="order") Заказать
 
-			- for (var i=0;i<9;i++)
-				.project__el
-					//.project-el__filter
-					.project__el-img-wrap
-						.project__el-img(style="background-image:url('img/item-"+(i+1)+".jpg')")
-						.scheme-slider-wrap
-							.scheme-slider-cont
-								.scheme-slider-control.scheme-slider-control--left
-									+icon("arrow-left","icon")
-								.scheme-slider-control.scheme-slider-control--right
-									+icon("arrow-right","icon")
-								.scheme-slider
-									a(href="img/scheme-1.jpg" rel="group-elemen" style="background-image:url('img/scheme-1.jpg')").fancybox.scheme-slider__el
-										img(src="img/scheme-1.jpg", alt="")
-									a(href="img/scheme-2.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg')").fancybox.scheme-slider__el
-										img(src="img/scheme-2.jpg", alt="")
-									a(href="img/scheme-3.jpg" rel="group-elemen" style="background-image:url('img/scheme-3.jpg')").fancybox.scheme-slider__el
-										img(src="img/scheme-3.jpg", alt="")
-									a(href="img/scheme-4.jpg" rel="group-elemen" style="background-image:url('img/scheme-4.jpg')").fancybox.scheme-slider__el
-										img(src="img/scheme-4.jpg", alt="")
-									a(href="img/scheme-2.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg')").fancybox.scheme-slider__el
-										img(src="img/scheme-2.jpg", alt="")
-									a(href="img/scheme-3.jpg" rel="group-elemen" style="background-image:url('img/scheme-2.jpg')").fancybox.scheme-slider__el
-										img(src="img/scheme-3.jpg", alt="")
-									a(href="img/scheme-1.jpg" rel="group-elemen" style="background-image:url('img/scheme-4.jpg')").fancybox.scheme-slider__el
-										img(src="img/scheme-1.jpg", alt="")
-						.project__el-descr
-							.project__el-wrap
-								.project__el-title Каркасный дом
-								.project__el-inf
-									.project__el-inf__el
-										.project__el-inf__name Площадь
-										.project__el-inf__val 30м
-									.project__el-inf__el
-										.project__el-inf__name Разработка
-										.project__el-inf__val 10 дней
-									.project__el-inf__el
-										.project__el-inf__name Гарантия
-										.project__el-inf__val 3 года
-							.project__el-get
-								.project__el-get-btn.modal-get(data-modal="order") Заказать
-								.project__el-get-btn Подробнее
+			//Бьерк
+			.project__el
+				//.project-el__filter
+				.project__el-img-wrap
+					.project__el-slider
+						.project__el-img(style="background-image:url('img/biork/biork-1.jpg')")
+					.scheme-slider-wrap
+						.scheme-slider-cont
+							.scheme-slider-control.scheme-slider-control--left
+								+icon("arrow-left","icon")
+							.scheme-slider-control.scheme-slider-control--right
+								+icon("arrow-right","icon")
+							.scheme-slider
+								- for (var i=0;i<2;i++)
+								a(href="img/biork/biork-pr-1-1.jpg" rel="group-elemen").fancybox.scheme-slider__el
+									img(src="img/biork/biork-pr-1-1.jpg", alt="")
+								a(href="img/biork/biork-pr-1-2.jpg" rel="group-elemen").fancybox.scheme-slider__el
+									img(src="img/biork/biork-pr-1-2.jpg", alt="")
+								a(href="img/biork/biork-pr-1-3.jpg" rel="group-elemen").fancybox.scheme-slider__el
+									img(src="img/biork/biork-pr-1-3.jpg", alt="")
+								a(href="img/biork/biork-pr-1-4.jpg" rel="group-elemen").fancybox.scheme-slider__el
+									img(src="img/biork/biork-pr-1-4.jpg", alt="")
+					.project__el-descr
+						.project__el-wrap
+							.project__el-title Бьерк
+							.project__el-inf
+								.project__el-inf__el
+									.project__el-inf__name Площадь
+									.project__el-inf__val 258 м <sup>2</sup>
+								.project__el-inf__el
+									.project__el-inf__name Комнат
+									.project__el-inf__val 4
+								.project__el-inf__el
+									.project__el-inf__name Разработка
+									.project__el-inf__val 1 месяц
+						.project__el-get
+							.project__el-get-btn.modal-get(data-modal="order") Заказать
 
-
-						//.project-info
-							.project-el__title Проект нового дома
-							.project-el__text Часто используемый в печати и вэб-дизайне
 
 .section.section-service#arch
 	.main-cont
-		.service-title Состав чертежей архитектурного раздела проекта
+		.service-title Комплект чертежей архитектурного раздела проекта
 		.service
 			.service-content
 				.slider-wrap
@@ -174,7 +204,7 @@ include block_html/_include.pug
 					.slider-control.slider-control--right
 						+icon("arrow-right","icon")
 					.slider-item.service-slider
-						- for (var i=1;i<11;i++)
+						- for (var i=1;i<16;i++)
 							a(href="img/ar/shale-ar-el-"+i+".jpg" rel="group-elemen" ).service-slider__el.fancybox
 								img(src="img/ar/shale-ar-el-"+i+".jpg", alt="")
 				.service-text Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации
@@ -185,8 +215,8 @@ include block_html/_include.pug
 						//.price__img
 							img(src="img/service-2.jpg", alt="")
 						.service-price__val от
-							span 200
-							| руб
+							span 500
+							| руб/м<sup>2</sup>
 				.price__el
 					.price__title Список работ
 					.price__list
@@ -207,7 +237,7 @@ include block_html/_include.pug
 
 .section.section-service#kp
 	.main-cont
-		.service-title Состав чертежей КР
+		.service-title КОМПЛЕКТ ЧЕРТЕЖЕЙ конструкторского РАЗДЕЛА ПРОЕКТА
 		.service
 			.service-content
 				.slider-wrap
@@ -226,8 +256,8 @@ include block_html/_include.pug
 						//.price__img
 							img(src="img/service-2.jpg", alt="")
 						.service-price__val от
-							span 200
-							| руб
+							span 500
+							| руб/м<sup>2</sup>
 				.price__el
 					.price__title Список работ
 					.price__list
@@ -401,7 +431,7 @@ include block_html/_include.pug
 		.section-title-sub Paradise of ascension will silently shape a further sun.
 		.price
 			.price__el
-				.price__title ЭСКИЗНЫЙ ПРОЕКТ
+				.price__title Архитектурный раздел <br> проекта
 
 				.price__val от
 					span 200
@@ -426,7 +456,7 @@ include block_html/_include.pug
 						+icon("eye","icon")
 					.price-more__text Пример отчета
 			.price__el
-				.price__title ЭСКИЗНЫЙ ПРОЕКТ
+				.price__title Конструкторский раздел <br> проекта
 
 				.price__val от
 					span 200
@@ -488,24 +518,25 @@ include block_html/_include.pug
 									a(href="#") условиями обработки персональных данных
 							input(type="submit" value="Отправить заявку").form-footer-send.modal-send
 					.contact-info
-						.map
-							script("text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A104108c83896b1a6c1b544e50f3d690ee4df2f43b13730f0b9a6f0d5ead96cae&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=false")
-
+						.contact-img
+							img(src="img/contact_girl.png", alt="")
 						.contact-row-wrap
 							.contact-row
 								.contact-icon
 									+icon("placeholder","icon")
-								.contact-text Москва, 1-ый Варшавский мой адрес
+								.contact-text 111674, г. Россия, Москва, 1-я Вольская ул., дом 12, оф. 18
 							.contact-row
 								.contact-icon
 									+icon("phone-call","icon")
-								.contact-text +7 (495) 123-12-22
+								.contact-text +7(926)595-34-64
 							.contact-row
 								.contact-icon
 									+icon("mail","icon")
-								.contact-text info@pochta.ru
+								.contact-text standart-idea@mail.ru
 	//section-contact-end
 
+.footer-map
+	script( type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A14f0de0a8ff462ffc8d6a24602870af9583a6d59f9099130c4d12b391594ee7e&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true")
 
 
 	.scroll-up

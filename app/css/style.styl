@@ -179,6 +179,7 @@ body
 	background: #ffffffd6
 	border-radius 0px 0 0 10px
 	overflow: hidden
+	min-width 300px
 .project__el-title
 	font-size: 24px
 	padding-bottom: 20px
@@ -201,6 +202,7 @@ body
 	font-weight:bold
 	up()
 	width: 100%
+	text-align: center
 
 
 .project__el-inf__name
@@ -459,7 +461,7 @@ body
 	display: none
 
 .section-project
-	padding-top: 40px
+	padding-top: 20px
 
 .price__list
 	position: relative
@@ -505,7 +507,6 @@ body
 		f()
 		justify-content: space-between
 		width: 100%
-	background: #f1f1f1
 	.input-row
 		width: 100%
 		input
@@ -526,6 +527,8 @@ body
 
 .section-contact
 	background #efefef
+	padding-bottom:0px
+
 .contact
 	form
 		width 100%
@@ -553,7 +556,6 @@ body
 	+below(768px)
 		width 100%
 	width 55%
-	background: white
 .map
 	+below(768px)
 		margin-bottom: 10px
@@ -622,7 +624,11 @@ body
 .contact-row-wrap
 	+below(768px)
 		padding: 20px
-	padding: 20px 40px
+	padding: 40px
+	background: white
+	.contact-row
+		&:last-child
+			margin-bottom:0
 
 .modal-layer
 	width: 100%
@@ -796,7 +802,7 @@ body
 	cp()
 	tr(all)
 	position: fixed
-	z-index 15
+	z-index 150
 	bottom 20%
 	right 5%
 	border 1px solid $border-color
@@ -816,3 +822,6 @@ body
 .scroll-up--show
 	opacity 1
 
+.footer-map
+	width: 100%
+	height: 500px
