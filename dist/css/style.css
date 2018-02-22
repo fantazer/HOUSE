@@ -999,7 +999,7 @@ body {
 .header-phone {
   text-transform: uppercase;
   font-size: 26px;
-  font-weight: 900;
+  font-weight: 400;
 }
 .baner {
   background-size: cover;
@@ -1029,7 +1029,7 @@ body {
       -ms-flex-flow: column;
           flex-flow: column;
   color: #111;
-  font-size: 76px;
+  font-size: 90px;
   text-transform: uppercase;
   font-weight: 900;
 }
@@ -1037,7 +1037,6 @@ body {
   color: #111;
 }
 .baner-text {
-  width: 70%;
   margin-top: 8%;
   margin-bottom: 30px;
   text-align: center;
@@ -1071,6 +1070,7 @@ body {
   text-align: center;
   font-weight: 900;
   font-size: 40px;
+  margin-bottom: 20px;
   text-transform: uppercase;
 }
 .section-title-sub {
@@ -1080,9 +1080,9 @@ body {
 .baner-text-sub {
   text-align: center;
   font-size: 14px;
-  width: 50%;
+  width: 60%;
   line-height: 1.6;
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: 30px;
 }
 .project__el {
@@ -1124,6 +1124,7 @@ body {
   -webkit-border-radius: 0px 0 0 10px;
           border-radius: 0px 0 0 10px;
   overflow: hidden;
+  min-width: 300px;
 }
 .project__el-title {
   font-size: 24px;
@@ -1155,6 +1156,7 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   width: 100%;
+  text-align: center;
 }
 .project__el-get-btn:first-child {
   border-right: 1px solid #e1e1e1;
@@ -1591,7 +1593,7 @@ body {
   display: none;
 }
 .section-project {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 .price__list {
   position: relative;
@@ -1654,7 +1656,6 @@ body {
 .contact-form {
   padding: 50px 0;
   margin-top: 100px;
-  background: #f1f1f1;
 }
 @media only screen and (max-width: 768px) {
   .contact-form {
@@ -1706,6 +1707,7 @@ body {
 }
 .section-contact {
   background: #efefef;
+  padding-bottom: 40px;
 }
 .contact form {
   width: 100%;
@@ -1715,9 +1717,20 @@ body {
 }
 .contact .main-form {
   padding: 40px;
-  border: 1px solid #e3e3e3;
 }
 .contact-form--footer {
+  *zoom: 1;
+  width: auto;
+  max-width: 850px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  width: 100%;
+  padding: 0 0px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1730,11 +1743,12 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin-top: 80px;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin-top: 0;
+  padding-top: 0;
 }
 @media only screen and (max-width: 768px) {
   .contact-form--footer {
@@ -1744,8 +1758,21 @@ body {
     margin-top: 30px;
   }
 }
+.contact-form--footer:before,
+.contact-form--footer:after {
+  content: '';
+  display: table;
+}
+.contact-form--footer:after {
+  clear: both;
+}
+@media only screen and (min-width: 850px) {
+  .contact-form--footer {
+    width: 850px;
+  }
+}
 .contact-form--footer .main-form {
-  width: 40%;
+  width: 50%;
 }
 @media only screen and (max-width: 768px) {
   .contact-form--footer .main-form {
@@ -1754,12 +1781,19 @@ body {
     padding: 30px 20px;
   }
 }
+.contact-form--footer form {
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
 .main-form {
   background: #fff;
+  position: relative;
 }
 .contact-info {
   width: 55%;
-  background: #fff;
+  background: #f7d506;
+  padding: 40px;
 }
 @media only screen and (max-width: 768px) {
   .contact-info {
@@ -1779,10 +1813,6 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -1791,8 +1821,8 @@ body {
 }
 .contact-row .icon {
   margin-right: 20px;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   fill: $green;
 }
 @media only screen and (max-width: 768px) {
@@ -1804,7 +1834,6 @@ body {
 .contact-text {
   font-size: 16px;
   line-height: 1.6;
-  width: 60%;
 }
 @media only screen and (max-width: 768px) {
   .contact-text {
@@ -1814,11 +1843,10 @@ body {
 }
 .form-title {
   text-transform: uppercase;
-  text-align: center;
   font-size: 24px;
   font-weight: bold;
   color: #111;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 @media only screen and (max-width: 1200px) {
   .form-title {
@@ -1826,9 +1854,8 @@ body {
   }
 }
 .form-title-sub {
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 40px;
-  text-align: center;
 }
 @media only screen and (max-width: 768px) {
   .form-title-sub {
@@ -1851,22 +1878,9 @@ body {
     font-size: 12px;
   }
 }
-.contact-form--footer {
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  margin-top: 0;
-  padding-top: 0;
-}
-.contact-form--footer form {
-  -webkit-flex-flow: column;
-      -ms-flex-flow: column;
-          flex-flow: column;
-}
 .form--footer .input-row {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 @media only screen and (max-width: 768px) {
   .form--footer .input-row {
@@ -1876,13 +1890,16 @@ body {
 .form--footer .input-row input {
   width: 100%;
 }
-.contact-row-wrap {
-  padding: 20px 40px;
+.form--footer .input-row textarea {
+  margin-bottom: 0 !important;
 }
 @media only screen and (max-width: 768px) {
   .contact-row-wrap {
     padding: 20px;
   }
+}
+.contact-row-wrap .contact-row:last-child {
+  margin-bottom: 0;
 }
 .modal-layer {
   width: 100%;
@@ -2083,7 +2100,7 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 10px 0 30px 0;
+  margin: 10px 0 20px 0;
 }
 .agree-row a {
   text-decoration: underline;
@@ -2125,7 +2142,7 @@ body {
   -webkit-transition: all 0.4s;
           transition: all 0.4s;
   position: fixed;
-  z-index: 15;
+  z-index: 150;
   bottom: 20%;
   right: 5%;
   border: 1px solid #e1e1e1;
@@ -2162,4 +2179,19 @@ body {
 }
 .scroll-up--show {
   opacity: 1;
+}
+.footer-map {
+  width: 100%;
+  height: 500px;
+}
+.contact-form__coner {
+  width: 20px;
+  height: 20px;
+  background: #f7d506;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: 40px;
+  right: -10px;
 }

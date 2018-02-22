@@ -82,7 +82,7 @@ body
 .header-phone
 	up()
 	font-size: 26px
-	font-weight: 900
+	font-weight: 400
 
 .baner
 	bg-full()
@@ -97,11 +97,11 @@ body
 	.btn--mark
 		color black
 	color black
-	font-size: 76px
+	font-size: 90px
 	up()
 	font-weight: 900
 .baner-text
-	width: 70%
+	//width: 70%
 	margin-top: 8%
 	margin-bottom: 30px
 	text-align: center
@@ -132,6 +132,7 @@ body
 	text-align: center
 	font-weight: 900
 	font-size: 40px
+	margin-bottom: 20px
 	up()
 
 .section-title-sub
@@ -141,9 +142,9 @@ body
 .baner-text-sub
 	text-align: center
 	font-size: 14px
-	width: 50%
+	width: 60%
 	line-height: 1.6
-	font-weight:400
+	font-weight:700
 	margin-bottom: 30px
 
 .project
@@ -527,7 +528,7 @@ body
 
 .section-contact
 	background #efefef
-	padding-bottom:0px
+	padding-bottom:40px
 
 .contact
 	form
@@ -536,38 +537,47 @@ body
 		width 100%
 	.main-form
 		padding 40px
-		border 1px solid #e3e3e3
+		//border 1px solid #e3e3e3
 .contact-form--footer
 	+below(768px)
 		fw()
 		margin-top 30px
+	center(850px,0px)
 	flex(between)
-	align-items flex-start
-	margin-top 80px
+	align-items: stretch
+	margin-top: 0
+	padding-top: 0
 	.main-form
 		+below(768px)
 			width 100%
 			margin-bottom 20px
 			padding 30px 20px
-		width 40%
+		width 60%
+	form
+		fl()
+
 .main-form
 	background: white
+	position: relative
 .contact-info
 	+below(768px)
 		width 100%
-	width 55%
+	width 40%
+	background: $yellow
+	padding: 40px
 .map
 	+below(768px)
 		margin-bottom: 10px
 	margin-bottom 40px
 .contact-row
-	flex(mid)
+	f()
+	align-items: center
 	margin-bottom 20px
 	.icon
 		margin-right 20px
 		+below(768px)
 			size 20px
-		size 30px
+		size 35px
 		fill $green
 .contact-text
 	+below(768px)
@@ -575,24 +585,21 @@ body
 		width 100%
 	font-size 16px
 	line-height:1.6
-	width 60%
 
 .form-title
 	+below(1200px)
 		font-size 16px
 	up()
-	text-align center
 	font-size 24px
 	font-weight bold
 	color black
-	margin-bottom: 20px
+	margin-bottom: 10px
 .form-title-sub
 	+below(768px)
 		font-size: 10px
 		margin-bottom: 20px
-	font-size 16px
+	font-size 14px
 	margin-bottom: 40px
-	text-align: center
 .form-month
 	up()
 	font-weight bold
@@ -604,31 +611,26 @@ body
 	text-align center
 	color grey
 
-.contact-form--footer
-	form
-		fl()
-	align-items: stretch
-	margin-top: 0
-	padding-top: 0
+
 
 .form--footer
 	.input-row
 		+below(768px)
 			margin-bottom: 0px
 		width: 100%
-		margin-bottom: 30px
+		margin-bottom: 20px
 		input
 			width: 100%
-
+		textarea
+			margin-bottom: 0!important
 
 .contact-row-wrap
 	+below(768px)
 		padding: 20px
-	padding: 40px
-	background: white
 	.contact-row
 		&:last-child
 			margin-bottom:0
+
 
 .modal-layer
 	width: 100%
@@ -771,7 +773,7 @@ body
 .agree-row
 	f()
 	align-items: center
-	margin:10px 0 30px 0
+	margin:10px 0 20px 0
 	a
 		text-decoration: underline
 		display: inline-block
@@ -825,3 +827,21 @@ body
 .footer-map
 	width: 100%
 	height: 500px
+
+.contact-form__coner
+	size 20px
+	background: $yellow
+	transform rotate(45deg)
+	position: absolute
+	top 40px
+	right: -10px
+
+.price-info
+	center(800px,0)
+	br(20px)
+	padding: 20px
+	text-align: center
+	margin-top: 40px
+	border 1px solid $yellow
+	line-height: 1.4
+	font-size: 14px

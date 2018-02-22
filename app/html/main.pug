@@ -22,15 +22,15 @@ include block_html/_include.pug
 	.filter--white
 	.main-cont
 		.baner-wrap
-			.baner-text Проектирование домов под
-				span ключ
-			.baner-text-sub В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов
+			.baner-text ПРОЕКТНАЯ
+				span МАСТЕРСКАЯ
+			.baner-text-sub ИНДИВИДУАЛЬНОЕ ПРОЕКТИРОВАНИЕ И ДИЗАЙН ДОМОМ, КВАРТИР ЗДАНИЙ
 			a(href="#description" rel='m_PageScroll2id').btn--md-fix.btn--red Подробнее
 
 .section.section-project#description
 	.main-cont
 		.section-title Наши проекты
-		.section-title-sub Paradise of ascension will silently shape a further sun.
+		.section-title-sub Надежное вопрощение,творческих решений
 		.project
 
 			//standart
@@ -207,7 +207,7 @@ include block_html/_include.pug
 						- for (var i=1;i<16;i++)
 							a(href="img/ar/shale-ar-el-"+i+".jpg" rel="group-elemen" ).service-slider__el.fancybox
 								img(src="img/ar/shale-ar-el-"+i+".jpg", alt="")
-				.service-text Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации
+				.service-text Работа начинается с составления Технического задания.На этом этапе заказчик формулирует свои пожелания к будущему дому.Далее выполняется эскизный проект(ЭП),на котором уже можно увидеть внешний вид и планировки дома.Здесь очень важна совместная работа архитектора и заказчика,так как эзкизный проект воплощает слова и желания в констрктивную форму.ЭП является техническим заданием для Архитектурного раздела проекта(АР),где уже детально прорабатываются все детали,формируются материалы и пироги конструкций,подбираются цветовые решения и отделка.
 
 			.service-list
 				.service-price
@@ -249,7 +249,7 @@ include block_html/_include.pug
 						- for (var i=1;i<18;i++)
 							a(href="img/kp/shale-kp-el-"+i+".jpg" rel="group-elemen" ).service-slider__el.fancybox
 								img(src="img/kp/shale-kp-el-"+i+".jpg", alt="")
-				.service-text Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации
+				.service-text Конструкторский раздел проекта(КР) является подробной инструкцией для выполнения строительных работ.Он выполняется на основании архитектурного раздела проекта (АР).Инженер констуктор проверяет решения, предложенные в АР в расчетном комплексе, детально разрабатывает несущие конструкции(армирование,раскладка плит,подбор типа фундамента,подбор и раскладка балок,итд).Особое внимание уделяется надежности и  экономической целесообразности того или иного решения. От этого этапа зависит долговечность всего дома.
 			.service-list
 				.service-price
 						.service-price__title Цена услуги
@@ -285,6 +285,55 @@ include block_html/_include.pug
 						.price__list-el Специальные указания и рекомендации по возведению конструкций.
 					.price__get.modal-get(data-modal="order") Заказать
 
+.section.section-service#Design
+	.main-cont
+		.service-title Технический дизайн проект
+		.service
+			.service-content
+				.slider-wrap
+					.slider-control.slider-control--left
+						+icon("arrow-left","icon")
+					.slider-control.slider-control--right
+						+icon("arrow-right","icon")
+					.slider-item.service-slider
+						- for (var i=1;i<6;i++)
+							a(href="img/design/design-el-"+i+".jpg" rel="group-elemen" ).service-slider__el.fancybox
+								img(src="img/design/design-el-"+i+".jpg", alt="")
+				.service-text Качественный ремонт квартиры, или отделка загородного дома требуют четкого плана работ. Таким планом является технический дизайн проект. Мы делаем не просто красивые картинки-визуализации, а понятную и подробную инструкцию по выполнению отделочных работ.Она будет понятна как заказчику,так и любому строителю. Кроме того,мы предоставляем подробную спецификацию на используемые материалы, которая позволяет оптимальным образом расчитать итоговую стоимость ремонта.
+			.service-list
+				.service-price
+						.service-price__title Цена услуги
+						//.price__img
+							img(src="img/service-2.jpg", alt="")
+						.service-price__val от
+							span 500
+							| руб/м<sup>2</sup>
+				.price__el
+					.price__title Список работ
+					.price__list
+						.price__list-el Кладочный планы этажей
+						.price__list-el Общие данные о проекте, строительных материалах, планировочных решениях.
+						.price__list-el Схема раскладки перемычек и их спецификации.
+						.price__list-el План стропильной системы с сечениями и спецификациями материалов.
+						.price__list-el Схема стропильной системы крыыши  3D
+						.price__list-el Узлы деревянных конструкций
+						.price__list-el Сложные сечения и узлы сопряжения основных конструкций.
+						.price__list-el Сечение стены по всей высоте дома.
+						.price__list-el Схемы вентиляционных каналов и дымоходов.
+						.price__list-el Общие данные о конструкциях дома, применяемых технологиях.
+						.price__list-el Спецификация деревянных конструкций
+						.price__list-el Схемы конструкций
+						.price__list-el Указания по выполнению работ
+						.price__list-el План фундаментов, сечения и спецификации материалов фундамента.
+						.price__list-el Схема армирования фундамента
+						.price__list-el Подробные проекты крылец, террас и навесов с спецификацией всех материалов.
+						.price__list-el План всех перекрытий, характерные узлы и спецификации материалов перекрытия.
+						.price__list-el Визуализация решений
+						.price__list-el Армопояс
+						.price__list-el Сечение по цоколю
+						.price__list-el Ведомость деталей
+						.price__list-el Специальные указания и рекомендации по возведению конструкций.
+					.price__get.modal-get(data-modal="order") Заказать
 //.section.section-about(style="background-image:url('https://www.toptal.com/designers/subtlepatterns/patterns/ep_naturalblack.png)')")
 .section.section-about(style="background-image:url('https://www.toptal.com/designers/subtlepatterns/patterns/concrete-texture.png)')")
 	//.section.section-about
@@ -379,40 +428,40 @@ include block_html/_include.pug
 .section.section-advant
 	.main-cont
 		.section-title Наши преимущества
-		.section-title-sub Paradise of ascension will silently shape a further sun.
+		.section-title-sub Сотрудничество с нами - гарантия уютного и комфортного жилья
 		.advant
 			.advant__el
 				.advant__el-icon
 					+icon("city","icon")
-				.advant__el-text Давно выяснено, что при оценке дизайна и композиции
+				.advant__el-text Соответствие Гос. стандартам
 			.advant__el
 				.advant__el-icon
 					+icon("prize","icon")
-				.advant__el-text Многие программы электронной вёрстки и редакторы HTML
+				.advant__el-text Гарантированное качество
 			.advant__el
 				.advant__el-icon
 					+icon("insurance","icon")
-				.advant__el-text Есть много вариантов Lorem Ipsum, но большинство из них имеет
+				.advant__el-text Индивидуальный подход
 			.advant__el
 				.advant__el-icon
-					+icon("house-1","icon")
-				.advant__el-text Многие думают, что Lorem Ipsum - взятый с потолка
+					+icon("stopwatch","icon")
+				.advant__el-text Кратчайшие сроки
 			.advant__el
 				.advant__el-icon
 					+icon("sketch","icon")
-				.advant__el-text Lorem Ipsum, "consectetur", и занялся его поисками в классической
+				.advant__el-text Пунктуальность и ответственность
 			.advant__el
 				.advant__el-icon
 					+icon("house","icon")
-				.advant__el-text Он использует словарь из более чем 200 латинских
+				.advant__el-text До 30% экономии стоимости строительных работ
 			.advant__el
 				.advant__el-icon
-					+icon("coins","icon")
-				.advant__el-text Его популяризации в новое время послужили публикация
+					+icon("piggy-bank","icon")
+				.advant__el-text Доступная цена
 			.advant__el
 				.advant__el-icon
-					+icon("settings","icon")
-				.advant__el-text В то время некий безымянный печатник создал послужили публикация
+					+icon("hourglass","icon")
+				.advant__el-text Экономия вашего времени
 
 //.section.section-news(style="background-image:url('img/img-2.jpg')")
 	.filter.filter--white
@@ -428,13 +477,13 @@ include block_html/_include.pug
 .section.section-price
 	.main-cont
 		.section-title Цены на наши услуги
-		.section-title-sub Paradise of ascension will silently shape a further sun.
+		.section-title-sub Наши цены самые конкурентные на рынке
 		.price
 			.price__el
 				.price__title Архитектурный раздел <br> проекта
 
 				.price__val от
-					span 200
+					span 500
 					| руб
 				.price__list
 					.price__list-el  Генплан участка с привязанным домом
@@ -459,7 +508,7 @@ include block_html/_include.pug
 				.price__title Конструкторский раздел <br> проекта
 
 				.price__val от
-					span 200
+					span 500
 					| руб
 				.price__list
 					.price__list-el Кладочный планы этажей
@@ -489,6 +538,7 @@ include block_html/_include.pug
 					.price-more__icon
 						+icon("eye","icon")
 					.price-more__text Пример отчета
+		.price-info Итоговая стоимость проектирования определяется в индивидуальном порядке. Проект маленького дома, имеющего сложную, нестандартную конфигурацию и строительные решения, может стоить дороже большого, классического дома. Для определения окончательной стоимости проектных работ, вы можете заказать консультацию нашего архитектора.
 
 .section-contact
 	#contact.section.section-contact
@@ -498,8 +548,7 @@ include block_html/_include.pug
 			.contact
 				.contact-form.contact-form--footer
 					.main-form
-						.form-title Оставьте вашу заявку
-						.form-title-sub Мы свяжемся с вам в кратчайшее время
+						.contact-form__coner
 						form.validate-form.form--footer( action="javascript:void(null);")
 							.input-row
 								input(type="text" name="name" placeholder="Ваше имя").input
@@ -518,8 +567,8 @@ include block_html/_include.pug
 									a(href="#") условиями обработки персональных данных
 							input(type="submit" value="Отправить заявку").form-footer-send.modal-send
 					.contact-info
-						.contact-img
-							img(src="img/contact_girl.png", alt="")
+						.form-title Оставьте вашу заявку
+						.form-title-sub Мы свяжемся с вам в кратчайшее время
 						.contact-row-wrap
 							.contact-row
 								.contact-icon
