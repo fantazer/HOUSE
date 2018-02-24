@@ -5,29 +5,26 @@ include block_html/_include.pug
 	.main-cont
 		.header-wrap
 			.logo
-				img(src="img/logo-old.png", alt="")
+				.logo__text Stand<span>Art</span>
+
+				img(src="img/logo-old.png", alt="").logo-img
 			.header-menu
-				-
-					var items = [
-						'Главная',
-						'О нас',
-						'Портфолио',
-						'Цена',
-						'Контакты'
-						];
-				each item in items
-					a(href="#").header-el #{item}
-			.header-phone 8(926)595-34-62
+				a(href="#about" rel='m_PageScroll2id').header-el О нас
+				a(href="#works" rel='m_PageScroll2id').header-el Портфолио
+				a(href="#price" rel='m_PageScroll2id').header-el Цены
+				a(href="#contact" rel='m_PageScroll2id').header-el Контакты
+
+			a(href="tel:8(926)595-34-64").header-phone 8(926)595-34-64
 .baner(style="background-image:url('img/bg-rulle.jpg')")
 	.filter--white
 	.main-cont
 		.baner-wrap
 			.baner-text ПРОЕКТНАЯ
 				span МАСТЕРСКАЯ
-			.baner-text-sub ИНДИВИДУАЛЬНОЕ ПРОЕКТИРОВАНИЕ И ДИЗАЙН ДОМОМ, КВАРТИР ЗДАНИЙ
-			a(href="#description" rel='m_PageScroll2id').btn--md-fix.btn--red Подробнее
+			.baner-text-sub Индивидуальное проектирование и дизайн домом, квартир, зданий
+			a(href="#works" rel='m_PageScroll2id').btn--md-fix.btn--red Подробнее
 
-.section.section-project#description
+.section.section-project#works
 	.main-cont
 		.section-title Наши проекты
 		.section-title-sub Надежное вопрощение,творческих решений
@@ -48,15 +45,9 @@ include block_html/_include.pug
 							.scheme-slider-control.scheme-slider-control--right
 								+icon("arrow-right","icon")
 							.scheme-slider
-								- for (var i=0;i<2;i++)
-									a(href="img/pr1/pr-sch-1-1.jpg" rel="group-elemen").fancybox.scheme-slider__el
-										img(src="img/pr1/pr-sch-1-1.jpg", alt="")
-									a(href="img/pr1/pr-sch-1-2.jpg" rel="group-elemen").fancybox.scheme-slider__el
-										img(src="img/pr1/pr-sch-1-2.jpg", alt="")
-									a(href="img/pr1/pr-sch-1-3.jpg" rel="group-elemen").fancybox.scheme-slider__el
-										img(src="img/pr1/pr-sch-1-3.jpg", alt="")
-									a(href="img/pr1/pr-sch-1-4.jpg" rel="group-elemen").fancybox.scheme-slider__el
-										img(src="img/pr1/pr-sch-1-4.jpg", alt="")
+								- for (var i=1;i<5;i++)
+									a(href="img/pr1/pr-sch-1-" + i + ".jpg" data-fancybox="images-classic").fancybox.scheme-slider__el
+										img(src="img/pr1/pr-sch-1-" + i + ".jpg", alt="")
 					.project__el-descr
 						.project__el-wrap
 							.project__el-title Классический
@@ -88,15 +79,9 @@ include block_html/_include.pug
 							.scheme-slider-control.scheme-slider-control--right
 								+icon("arrow-right","icon")
 							.scheme-slider
-								- for (var i=0;i<2;i++)
-								a(href="img/wood/wood-pr-1-1.jpg" rel="group-elemen").fancybox.scheme-slider__el
-									img(src="img/wood/wood-pr-1-1.jpg", alt="")
-								a(href="img/wood/wood-pr-1-2.jpg" rel="group-elemen").fancybox.scheme-slider__el
-									img(src="img/wood/wood-pr-1-2.jpg", alt="")
-								a(href="img/wood/wood-pr-1-3.jpg" rel="group-elemen").fancybox.scheme-slider__el
-									img(src="img/wood/wood-pr-1-3.jpg", alt="")
-								a(href="img/wood/wood-pr-1-4.jpg" rel="group-elemen").fancybox.scheme-slider__el
-									img(src="img/wood/wood-pr-1-4.jpg", alt="")
+								- for (var i=1;i<5;i++)
+									a(href="img/wood/wood-pr-1-" + i + ".jpg" data-fancybox="images-rubl").fancybox.scheme-slider__el
+										img(src="img/wood/wood-pr-1-" + i + ".jpg", alt="")
 					.project__el-descr
 						.project__el-wrap
 							.project__el-title Рубленный
@@ -118,10 +103,8 @@ include block_html/_include.pug
 				//.project-el__filter
 				.project__el-img-wrap
 					.project__el-slider
-						.project__el-img(style="background-image:url('img/raita/raita-1-1.jpg')")
-						.project__el-img(style="background-image:url('img/raita/raita-1-2.jpg')")
-						.project__el-img(style="background-image:url('img/raita/raita-1-3.jpg')")
-						.project__el-img(style="background-image:url('img/raita/raita-1-4.jpg')")
+						- for (var i=1;i<4;i++)
+							.project__el-img(style="background-image:url('img/raita/raita-1-" + i + ".jpg')")
 					.scheme-slider-wrap
 						.scheme-slider-cont
 							.scheme-slider-control.scheme-slider-control--left
@@ -129,15 +112,9 @@ include block_html/_include.pug
 							.scheme-slider-control.scheme-slider-control--right
 								+icon("arrow-right","icon")
 							.scheme-slider
-								- for (var i=0;i<2;i++)
-								a(href="img/raita/raita-pr-1-1.jpg" rel="group-elemen").fancybox.scheme-slider__el
-									img(src="img/raita/raita-pr-1-1.jpg", alt="")
-								a(href="img/raita/raita-pr-1-2.jpg" rel="group-elemen").fancybox.scheme-slider__el
-									img(src="img/raita/raita-pr-1-2.jpg", alt="")
-								a(href="img/raita/raita-pr-1-3.jpg" rel="group-elemen").fancybox.scheme-slider__el
-									img(src="img/raita/raita-pr-1-3.jpg", alt="")
-								a(href="img/raita/raita-pr-1-4.jpg" rel="group-elemen").fancybox.scheme-slider__el
-									img(src="img/raita/raita-pr-1-4.jpg", alt="")
+								- for (var i=1;i<5;i++)
+									a(href="img/raita/raita-pr-1-" + i + ".jpg" data-fancybox="images-raita").fancybox.scheme-slider__el
+										img(src="img/raita/raita-pr-1-" + i + ".jpg", alt="")
 					.project__el-descr
 						.project__el-wrap
 							.project__el-title Райта
@@ -167,15 +144,9 @@ include block_html/_include.pug
 							.scheme-slider-control.scheme-slider-control--right
 								+icon("arrow-right","icon")
 							.scheme-slider
-								- for (var i=0;i<2;i++)
-								a(href="img/biork/biork-pr-1-1.jpg" rel="group-elemen").fancybox.scheme-slider__el
-									img(src="img/biork/biork-pr-1-1.jpg", alt="")
-								a(href="img/biork/biork-pr-1-2.jpg" rel="group-elemen").fancybox.scheme-slider__el
-									img(src="img/biork/biork-pr-1-2.jpg", alt="")
-								a(href="img/biork/biork-pr-1-3.jpg" rel="group-elemen").fancybox.scheme-slider__el
-									img(src="img/biork/biork-pr-1-3.jpg", alt="")
-								a(href="img/biork/biork-pr-1-4.jpg" rel="group-elemen").fancybox.scheme-slider__el
-									img(src="img/biork/biork-pr-1-4.jpg", alt="")
+								- for (var i=1;i<5;i++)
+									a(href="img/biork/biork-pr-1-" + i + ".jpg" data-fancybox="images-biork").fancybox.scheme-slider__el
+										img(src="img/biork/biork-pr-1-" + i + ".jpg", alt="")
 					.project__el-descr
 						.project__el-wrap
 							.project__el-title Бьерк
@@ -191,7 +162,38 @@ include block_html/_include.pug
 									.project__el-inf__val 1 месяц
 						.project__el-get
 							.project__el-get-btn.modal-get(data-modal="order") Заказать
-
+			//Дизайн проект
+			.project__el
+				//.project-el__filter
+				.project__el-img-wrap
+					.project__el-slider
+						- for (var i=1;i<6;i++)
+							.project__el-img(style="background-image:url(img/design/design-el-" + i + ".jpg)")
+					.scheme-slider-wrap
+						.scheme-slider-cont
+							.scheme-slider-control.scheme-slider-control--left
+								+icon("arrow-left","icon")
+							.scheme-slider-control.scheme-slider-control--right
+								+icon("arrow-right","icon")
+							.scheme-slider
+								- for (var i=1;i<5;i++)
+									a(href="img/design/flat-" + i + ".jpg" data-fancybox="images-designproj").fancybox.scheme-slider__el
+										img(src="img/design/flat-" + i + ".jpg", alt="")
+					.project__el-descr
+						.project__el-wrap
+							.project__el-title Дизайн проект
+							.project__el-inf
+								.project__el-inf__el
+									.project__el-inf__name Площадь
+									.project__el-inf__val 50 м <sup>2</sup>
+								.project__el-inf__el
+									.project__el-inf__name Комнат
+									.project__el-inf__val 2
+								.project__el-inf__el
+									.project__el-inf__name Разработка
+									.project__el-inf__val 2 недели
+						.project__el-get
+							.project__el-get-btn.modal-get(data-modal="order") Заказать
 
 .section.section-service#arch
 	.main-cont
@@ -204,19 +206,19 @@ include block_html/_include.pug
 					.slider-control.slider-control--right
 						+icon("arrow-right","icon")
 					.slider-item.service-slider
-						- for (var i=1;i<16;i++)
-							a(href="img/ar/shale-ar-el-"+i+".jpg" rel="group-elemen" ).service-slider__el.fancybox
-								img(src="img/ar/shale-ar-el-"+i+".jpg", alt="")
+						- for (var i=1;i<24;i++)
+							a(href="img/ar/shale-ar-el-" + i + ".jpg" data-fancybox="images-arh" ).service-slider__el.fancybox
+								img(src="img/ar/shale-ar-el-" + i + ".jpg", alt="")
 				.service-text Работа начинается с составления Технического задания.На этом этапе заказчик формулирует свои пожелания к будущему дому.Далее выполняется эскизный проект(ЭП),на котором уже можно увидеть внешний вид и планировки дома.Здесь очень важна совместная работа архитектора и заказчика,так как эзкизный проект воплощает слова и желания в констрктивную форму.ЭП является техническим заданием для Архитектурного раздела проекта(АР),где уже детально прорабатываются все детали,формируются материалы и пироги конструкций,подбираются цветовые решения и отделка.
 
 			.service-list
 				.service-price
-						.service-price__title Цена услуги
-						//.price__img
-							img(src="img/service-2.jpg", alt="")
-						.service-price__val от
-							span 500
-							| руб/м<sup>2</sup>
+					.service-price__title Цена услуги
+					//.price__img
+						img(src="img/service-2.jpg", alt="")
+					.service-price__val от
+						span 500
+						| руб/м<sup>2</sup>
 				.price__el
 					.price__title Список работ
 					.price__list
@@ -247,17 +249,17 @@ include block_html/_include.pug
 						+icon("arrow-right","icon")
 					.slider-item.service-slider
 						- for (var i=1;i<18;i++)
-							a(href="img/kp/shale-kp-el-"+i+".jpg" rel="group-elemen" ).service-slider__el.fancybox
-								img(src="img/kp/shale-kp-el-"+i+".jpg", alt="")
+							a(href="img/kp/shale-kp-el-" + i + ".jpg" data-fancybox="images-drawing" ).service-slider__el.fancybox
+								img(src="img/kp/shale-kp-el-" + i + ".jpg", alt="")
 				.service-text Конструкторский раздел проекта(КР) является подробной инструкцией для выполнения строительных работ.Он выполняется на основании архитектурного раздела проекта (АР).Инженер констуктор проверяет решения, предложенные в АР в расчетном комплексе, детально разрабатывает несущие конструкции(армирование,раскладка плит,подбор типа фундамента,подбор и раскладка балок,итд).Особое внимание уделяется надежности и  экономической целесообразности того или иного решения. От этого этапа зависит долговечность всего дома.
 			.service-list
 				.service-price
-						.service-price__title Цена услуги
-						//.price__img
-							img(src="img/service-2.jpg", alt="")
-						.service-price__val от
-							span 500
-							| руб/м<sup>2</sup>
+					.service-price__title Цена услуги
+					//.price__img
+						img(src="img/service-2.jpg", alt="")
+					.service-price__val от
+						span 500
+						| руб/м<sup>2</sup>
 				.price__el
 					.price__title Список работ
 					.price__list
@@ -285,9 +287,9 @@ include block_html/_include.pug
 						.price__list-el Специальные указания и рекомендации по возведению конструкций.
 					.price__get.modal-get(data-modal="order") Заказать
 
-.section.section-service#Design
+.section.section-service#flat
 	.main-cont
-		.service-title Технический дизайн проект
+		.service-title Комплект чертежей технического дизайн проекта
 		.service
 			.service-content
 				.slider-wrap
@@ -296,46 +298,41 @@ include block_html/_include.pug
 					.slider-control.slider-control--right
 						+icon("arrow-right","icon")
 					.slider-item.service-slider
-						- for (var i=1;i<6;i++)
-							a(href="img/design/design-el-"+i+".jpg" rel="group-elemen" ).service-slider__el.fancybox
-								img(src="img/design/design-el-"+i+".jpg", alt="")
+						- for (var i=0;i<6;i++)
+							a(href="img/design/flat-" + i + ".jpg" data-fancybox="images-design" ).service-slider__el.fancybox
+								img(src="img/design/flat-" + i + ".jpg", alt="")
 				.service-text Качественный ремонт квартиры, или отделка загородного дома требуют четкого плана работ. Таким планом является технический дизайн проект. Мы делаем не просто красивые картинки-визуализации, а понятную и подробную инструкцию по выполнению отделочных работ.Она будет понятна как заказчику,так и любому строителю. Кроме того,мы предоставляем подробную спецификацию на используемые материалы, которая позволяет оптимальным образом расчитать итоговую стоимость ремонта.
 			.service-list
 				.service-price
-						.service-price__title Цена услуги
-						//.price__img
-							img(src="img/service-2.jpg", alt="")
-						.service-price__val от
-							span 500
-							| руб/м<sup>2</sup>
+					.service-price__title Цена услуги
+					//.price__img
+						img(src="img/service-2.jpg", alt="")
+					.service-price__val от
+						span 500
+						| руб/м<sup>2</sup>
 				.price__el
 					.price__title Список работ
 					.price__list
-						.price__list-el Кладочный планы этажей
-						.price__list-el Общие данные о проекте, строительных материалах, планировочных решениях.
-						.price__list-el Схема раскладки перемычек и их спецификации.
-						.price__list-el План стропильной системы с сечениями и спецификациями материалов.
-						.price__list-el Схема стропильной системы крыыши  3D
-						.price__list-el Узлы деревянных конструкций
-						.price__list-el Сложные сечения и узлы сопряжения основных конструкций.
-						.price__list-el Сечение стены по всей высоте дома.
-						.price__list-el Схемы вентиляционных каналов и дымоходов.
-						.price__list-el Общие данные о конструкциях дома, применяемых технологиях.
-						.price__list-el Спецификация деревянных конструкций
-						.price__list-el Схемы конструкций
-						.price__list-el Указания по выполнению работ
-						.price__list-el План фундаментов, сечения и спецификации материалов фундамента.
-						.price__list-el Схема армирования фундамента
-						.price__list-el Подробные проекты крылец, террас и навесов с спецификацией всех материалов.
-						.price__list-el План всех перекрытий, характерные узлы и спецификации материалов перекрытия.
-						.price__list-el Визуализация решений
-						.price__list-el Армопояс
-						.price__list-el Сечение по цоколю
-						.price__list-el Ведомость деталей
-						.price__list-el Специальные указания и рекомендации по возведению конструкций.
+						-
+							var items = [
+							'Титульный лист',
+							'Пояснительная записка',
+							'Обмерочных план',
+							'Планировочный план',
+							'План демонтажных работ',
+							'План монтажных работ',
+							'План отделочных работ',
+							'Схема раскладки плитки',
+							'Схема расположения электроприборов',
+							'Схема расположения светильников',
+							'Спецификации строительных материалов'
+							];
+						each item in items
+							.price__list-el #{item}
 					.price__get.modal-get(data-modal="order") Заказать
 //.section.section-about(style="background-image:url('https://www.toptal.com/designers/subtlepatterns/patterns/ep_naturalblack.png)')")
-.section.section-about(style="background-image:url('https://www.toptal.com/designers/subtlepatterns/patterns/concrete-texture.png)')")
+
+.section.section-about#about(style="background-image:url('https://www.toptal.com/designers/subtlepatterns/patterns/concrete-texture.png)')")
 	//.section.section-about
 	//.filter
 	.main-cont
@@ -474,7 +471,7 @@ include block_html/_include.pug
 					.news__el-title Многие программы электронной
 					.news__el-text Спрос на строительство каркасных домов в последние несколько лет активно набирает обороты, это связано с потребностью ускоренного заселения в новый дом. Активный ритм современного человека и жизненные ситуации порой не позволяют медлить с заселением или отложить отдых на новой даче загородом. Дом построенный из бревна или бруса,
 
-.section.section-price
+.section.section-price#price
 	.main-cont
 		.section-title Цены на наши услуги
 		.section-title-sub Наши цены самые конкурентные на рынке
@@ -535,6 +532,33 @@ include block_html/_include.pug
 					.price__list-el Специальные указания и рекомендации по возведению конструкций.
 				.price__get.modal-get(data-modal="order") Заказать
 				a(href="#kp" rel='m_PageScroll2id').price-more
+					.price-more__icon
+						+icon("eye","icon")
+					.price-more__text Пример отчета
+			.price__el
+				.price__title Технический дизайн <br> проект
+				.price__val от
+					span 500
+					| руб
+				.price__list
+					-
+						var items = [
+						'Титульный лист',
+						'Пояснительная записка',
+						'Обмерочных план',
+						'Планировочный план',
+						'План демонтажных работ',
+						'План монтажных работ',
+						'План отделочных работ',
+						'Схема раскладки плитки',
+						'Схема расположения электроприборов',
+						'Схема расположения светильников',
+						'Спецификации строительных материалов'
+						];
+					each item in items
+						.price__list-el #{item}
+				.price__get.modal-get(data-modal="order") Заказать
+				a(href="#flat" rel='m_PageScroll2id').price-more
 					.price-more__icon
 						+icon("eye","icon")
 					.price-more__text Пример отчета
@@ -619,7 +643,7 @@ include block_html/_include.pug
 									a(href="#") условиями обработки персональных данных
 							input(type="submit" value="Отправить заявку").modal-send
 
-				.modal(data-modal="true")
+				.modal(data-modal="truemessage")
 					.modal-content.modal-content--true
 						+icon("interface","icon")
 						.modal-text-true Ваша заявка принята

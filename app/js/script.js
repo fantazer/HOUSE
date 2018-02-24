@@ -11,6 +11,28 @@
 
 $(document).ready(function(){
 
+	//animate header
+	var shrinkHeader = 250;
+	var heightHeader=$('.header').height();
+	$(window).scroll(function() {
+		var scroll = $(this).scrollTop();
+		if ( scroll >= shrinkHeader ) {
+				$('body').css('paddingTop',heightHeader);
+				$('.header').addClass('shrink');
+			}
+			else {
+					$('body').css('paddingTop',0);
+					$('.header').removeClass('shrink');
+			}
+	});
+
+	$(window).resize(function(){
+		heightHeader=$('.header').height();
+	});
+	//animate header===edn
+
+
+
 	// template scrollbar
 	$('.price__list').perfectScrollbar();
 	// template scrollbar === end
@@ -53,8 +75,6 @@ $(document).ready(function(){
 
 	var initModal = function(el){
 		openModal();
-		$('.enter').removeClass('enter--open');
-		$('.basket').removeClass('basket--open');
 		$('.modal').each(function () {
 			if ($(this).data('modal')===el){
 				$(this).addClass('modal__show')
@@ -125,12 +145,12 @@ $(document).ready(function(){
 					submitHandler : function(form){
 						$.ajax({ //отправка ajax
 						            type: "POST",
-						            url: "/wp-content/themes/AAK/sender.php",
+						            url: "sender.php",
 						            data: $(form).serialize(),
 						            timeout: 3000,
 						          });
 							closeModal();
-							initModal("next");
+							initModal("truemessage");
 							setTimeout(function(){
 										closeModal();
 										$(':input','.validate-form') //очитска формы от данных
@@ -143,11 +163,21 @@ $(document).ready(function(){
 				}
 		    });
 		});
+
 	//validate===end
 
 
 	//fancy-box
-	$(".fancybox").fancybox();
+
+	$('.fancybox').fancybox({
+		thumbs : {
+			autoStart : true
+		},
+		buttons : [
+			'zoom',
+			'close'
+		]
+	});
 	//fancy-box === end
 
 	//scroll top

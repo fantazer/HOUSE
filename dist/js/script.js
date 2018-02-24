@@ -125,12 +125,12 @@ $(document).ready(function(){
 					submitHandler : function(form){
 						$.ajax({ //отправка ajax
 						            type: "POST",
-						            url: "/wp-content/themes/AAK/sender.php",
+						            url: "sender.php",
 						            data: $(form).serialize(),
 						            timeout: 3000,
 						          });
 							closeModal();
-							initModal("next");
+							initModal("true");
 							setTimeout(function(){
 										closeModal();
 										$(':input','.validate-form') //очитска формы от данных

@@ -196,12 +196,12 @@ btnStyleLight(br-btn,color-btn)
 	.nav-icon
 		fill white
 	&:hover
-		background-color lighten($yellow,20)
+		background-color lighten($yellow,10)
 		color black
+		box-shadow 0px 5px 10px #c5c2c2
 	&:active
-		background-color lighten($yellow,20)
+		background-color lighten($yellow,10)
 		color black
-
 	input[type="submit"]
 		border 0
 	.nav-icon
@@ -351,7 +351,7 @@ button
 		cp()
 		tr(all)
 		&:hover
-			border 1px solid green
+			border 1px solid black
 	.icon-check
 		display none
 	.sytle-input
@@ -360,7 +360,7 @@ button
 			color white
 			.icon-check
 				display block
-				fill green
+				fill black
 				size 16px
 
 .style-label--radio

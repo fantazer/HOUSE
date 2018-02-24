@@ -1151,7 +1151,6 @@ body {
   padding: 40px;
 }
 .project__el-get-btn {
-  border-top: 1px solid #e1e1e1;
   padding: 20px;
   font-weight: bold;
   text-transform: uppercase;
@@ -1340,18 +1339,6 @@ body {
   line-height: 1.4;
 }
 .price {
-  *zoom: 1;
-  width: auto;
-  max-width: 1000px;
-  float: none;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 0;
-  padding-right: 0;
-  position: relative;
-  width: 100%;
-  padding: 0 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1360,26 +1347,9 @@ body {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.price:before,
-.price:after {
-  content: '';
-  display: table;
-}
-.price:after {
-  clear: both;
-}
-@media only screen and (min-width: 1000px) {
-  .price {
-    width: 1000px;
-  }
 }
 .price__el {
-  width: 45%;
+  width: 31%;
   padding: 40px 20px;
   border: 1px solid #e1e1e1;
   -webkit-border-radius: 10px;
@@ -1772,7 +1742,7 @@ body {
   }
 }
 .contact-form--footer .main-form {
-  width: 50%;
+  width: 60%;
 }
 @media only screen and (max-width: 768px) {
   .contact-form--footer .main-form {
@@ -1791,7 +1761,7 @@ body {
   position: relative;
 }
 .contact-info {
-  width: 55%;
+  width: 40%;
   background: #f7d506;
   padding: 40px;
 }
@@ -1880,7 +1850,7 @@ body {
 }
 .form--footer .input-row {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 @media only screen and (max-width: 768px) {
   .form--footer .input-row {
@@ -2194,4 +2164,39 @@ body {
   position: absolute;
   top: 40px;
   right: -10px;
+}
+.price-info {
+  *zoom: 1;
+  width: auto;
+  max-width: 800px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  width: 100%;
+  padding: 0 0;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+  border: 1px solid #f7d506;
+  line-height: 1.4;
+  font-size: 14px;
+}
+.price-info:before,
+.price-info:after {
+  content: '';
+  display: table;
+}
+.price-info:after {
+  clear: both;
+}
+@media only screen and (min-width: 800px) {
+  .price-info {
+    width: 800px;
+  }
 }

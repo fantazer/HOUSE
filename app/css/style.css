@@ -149,15 +149,6 @@
     transform: translate3d(0, 0, 0);
   }
 }
-.shrink {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #fff;
-  width: 100%;
-  margin: 0;
-  animation: slideInDown 1s 1 ease-in-out;
-}
 @-moz-keyframes slideInDown {
   from {
     transform: translate3d(0, -100%, 0);
@@ -549,13 +540,14 @@ p {
 .btn--mark:hover,
 .price__get:hover,
 .modal-send:hover {
-  background-color: #fbe668;
+  background-color: #fade36;
   color: #111;
+  box-shadow: 0px 5px 10px #c5c2c2;
 }
 .btn--mark:active,
 .price__get:active,
 .modal-send:active {
-  background-color: #fbe668;
+  background-color: #fade36;
   color: #111;
 }
 .btn--mark input[type="submit"],
@@ -745,7 +737,7 @@ button {
   cursor: pointer;
 }
 .check-el .sytle-input-element:hover {
-  border: 1px solid #2ecc40;
+  border: 1px solid #111;
 }
 .check-el .icon-check {
   display: none;
@@ -758,7 +750,7 @@ button {
 }
 .check-el .sytle-input:checked ~ .sytle-input-element .icon-check {
   display: block;
-  fill: #2ecc40;
+  fill: #111;
   width: 16px;
   height: 16px;
 }
@@ -879,10 +871,15 @@ body {
   right: 0;
   background: #dfdfdf;
 }
+.header-el:last-child:after {
+  content: '';
+  display: none;
+}
 .header-phone {
   text-transform: uppercase;
   font-size: 26px;
   font-weight: 400;
+  color: #111;
 }
 .baner {
   background-size: cover;
@@ -1008,10 +1005,10 @@ body {
   padding: 40px;
 }
 .project__el-get-btn {
-  border-top: 1px solid #e1e1e1;
+  text-transform: uppercase;
+  transition: all 0.4s;
   padding: 20px;
   font-weight: bold;
-  text-transform: uppercase;
   width: 100%;
   text-align: center;
 }
@@ -1019,6 +1016,9 @@ body {
   border-right: 1px solid #e1e1e1;
   background: #c60000;
   color: #fff;
+}
+.project__el-get-btn:hover {
+  background: #f90000;
 }
 .project__el-inf__name {
   font-size: 14px;
@@ -1144,37 +1144,11 @@ body {
   line-height: 1.4;
 }
 .price {
-  *zoom: 1;
-  width: auto;
-  max-width: 1000px;
-  float: none;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 0;
-  padding-right: 0;
-  position: relative;
-  width: 100%;
-  padding: 0 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-.price:before,
-.price:after {
-  content: '';
-  display: table;
-}
-.price:after {
-  clear: both;
-}
-@media only screen and (min-width: 1000px) {
-  .price {
-    width: 1000px;
-  }
 }
 .price__el {
-  width: 45%;
+  width: 31%;
   padding: 40px 20px;
   border: 1px solid #e1e1e1;
   border-radius: 10px;
@@ -1784,9 +1758,6 @@ body {
   padding: 15px;
   font-size: 16px;
 }
-.modal-send:hover {
-  box-shadow: 0 9px 18px #4c4813;
-}
 .agree-row {
   display: flex;
   align-items: center;
@@ -1905,4 +1876,48 @@ body {
   .price-info {
     width: 800px;
   }
+}
+.modal-content--true {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  border-radius: 10px;
+}
+.modal-content--true .icon {
+  fill: #2ecc40;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+.modal-text-true {
+  text-align: center;
+  font-weight: bold;
+}
+.logo__text {
+  font-weight: 900;
+  font-size: 32px;
+  display: none;
+  text-transform: uppercase;
+}
+.logo__text span {
+  color: #c60000;
+  margin-left: -5px;
+}
+.shrink {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  margin: 0;
+  animation: slideInDown 1s 1 ease-in-out;
+  z-index: 100;
+  box-shadow: 0px 2px 10px #8a8a8a;
+}
+.shrink .logo__text {
+  display: block;
+}
+.shrink .logo-img {
+  display: none;
 }
