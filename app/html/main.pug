@@ -47,7 +47,7 @@ include block_html/_include.pug
 							.scheme-slider
 								- for (var i=1;i<5;i++)
 									a(href="img/pr1/pr-sch-1-" + i + ".jpg" data-fancybox="images-classic").fancybox.scheme-slider__el
-										img(src="img/pr1/pr-sch-1-" + i + ".jpg", alt="")
+										img(src="img/pr1/pr-sch-1-" + i + "-min.jpg", alt="")
 					.project__el-descr
 						.project__el-wrap
 							.project__el-title Классический
@@ -81,7 +81,7 @@ include block_html/_include.pug
 							.scheme-slider
 								- for (var i=1;i<5;i++)
 									a(href="img/wood/wood-pr-1-" + i + ".jpg" data-fancybox="images-rubl").fancybox.scheme-slider__el
-										img(src="img/wood/wood-pr-1-" + i + ".jpg", alt="")
+										img(src="img/wood/wood-pr-1-" + i + "-min.jpg", alt="")
 					.project__el-descr
 						.project__el-wrap
 							.project__el-title Рубленный
@@ -114,7 +114,7 @@ include block_html/_include.pug
 							.scheme-slider
 								- for (var i=1;i<5;i++)
 									a(href="img/raita/raita-pr-1-" + i + ".jpg" data-fancybox="images-raita").fancybox.scheme-slider__el
-										img(src="img/raita/raita-pr-1-" + i + ".jpg", alt="")
+										img(src="img/raita/raita-pr-1-" + i + "-min.jpg", alt="")
 					.project__el-descr
 						.project__el-wrap
 							.project__el-title Райта
@@ -146,7 +146,7 @@ include block_html/_include.pug
 							.scheme-slider
 								- for (var i=1;i<5;i++)
 									a(href="img/biork/biork-pr-1-" + i + ".jpg" data-fancybox="images-biork").fancybox.scheme-slider__el
-										img(src="img/biork/biork-pr-1-" + i + ".jpg", alt="")
+										img(src="img/biork/biork-pr-1-" + i + "-min.jpg", alt="")
 					.project__el-descr
 						.project__el-wrap
 							.project__el-title Бьерк
@@ -176,7 +176,7 @@ include block_html/_include.pug
 							.scheme-slider-control.scheme-slider-control--right
 								+icon("arrow-right","icon")
 							.scheme-slider
-								- for (var i=1;i<5;i++)
+								- for (var i=0;i<6;i++)
 									a(href="img/design/flat-" + i + ".jpg" data-fancybox="images-designproj").fancybox.scheme-slider__el
 										img(src="img/design/flat-" + i + ".jpg", alt="")
 					.project__el-descr
@@ -207,8 +207,8 @@ include block_html/_include.pug
 						+icon("arrow-right","icon")
 					.slider-item.service-slider
 						- for (var i=1;i<24;i++)
-							a(href="img/ar/shale-ar-el-" + i + ".jpg" data-fancybox="images-arh" ).service-slider__el.fancybox
-								img(src="img/ar/shale-ar-el-" + i + ".jpg", alt="")
+							a(href="img/ar/shale-ar-el-" + i + ".jpg" data-fancybox="images-arh" ).service-slider__el.fancybox-gallary
+								img(data-lazy="img/ar/shale-ar-el-" + i + ".jpg" , alt="")
 				.service-text Работа начинается с составления Технического задания.На этом этапе заказчик формулирует свои пожелания к будущему дому.Далее выполняется эскизный проект(ЭП),на котором уже можно увидеть внешний вид и планировки дома.Здесь очень важна совместная работа архитектора и заказчика,так как эзкизный проект воплощает слова и желания в констрктивную форму.ЭП является техническим заданием для Архитектурного раздела проекта(АР),где уже детально прорабатываются все детали,формируются материалы и пироги конструкций,подбираются цветовые решения и отделка.
 
 			.service-list
@@ -249,8 +249,8 @@ include block_html/_include.pug
 						+icon("arrow-right","icon")
 					.slider-item.service-slider
 						- for (var i=1;i<18;i++)
-							a(href="img/kp/shale-kp-el-" + i + ".jpg" data-fancybox="images-drawing" ).service-slider__el.fancybox
-								img(src="img/kp/shale-kp-el-" + i + ".jpg", alt="")
+							a(href="img/kp/shale-kp-el-" + i + ".jpg" data-fancybox="images-drawing" ).service-slider__el.fancybox-gallary
+								img(data-lazy="img/kp/shale-kp-el-" + i + ".jpg", alt="")
 				.service-text Конструкторский раздел проекта(КР) является подробной инструкцией для выполнения строительных работ.Он выполняется на основании архитектурного раздела проекта (АР).Инженер констуктор проверяет решения, предложенные в АР в расчетном комплексе, детально разрабатывает несущие конструкции(армирование,раскладка плит,подбор типа фундамента,подбор и раскладка балок,итд).Особое внимание уделяется надежности и  экономической целесообразности того или иного решения. От этого этапа зависит долговечность всего дома.
 			.service-list
 				.service-price
@@ -299,8 +299,8 @@ include block_html/_include.pug
 						+icon("arrow-right","icon")
 					.slider-item.service-slider
 						- for (var i=0;i<6;i++)
-							a(href="img/design/flat-" + i + ".jpg" data-fancybox="images-design" ).service-slider__el.fancybox
-								img(src="img/design/flat-" + i + ".jpg", alt="")
+							a(href="img/design/flat-" + i + ".jpg" data-fancybox="images-design" ).service-slider__el.fancybox-gallary
+								img(data-lazy="img/design/flat-" + i + ".jpg", alt="")
 				.service-text Качественный ремонт квартиры, или отделка загородного дома требуют четкого плана работ. Таким планом является технический дизайн проект. Мы делаем не просто красивые картинки-визуализации, а понятную и подробную инструкцию по выполнению отделочных работ.Она будет понятна как заказчику,так и любому строителю. Кроме того,мы предоставляем подробную спецификацию на используемые материалы, которая позволяет оптимальным образом расчитать итоговую стоимость ремонта.
 			.service-list
 				.service-price
@@ -332,7 +332,7 @@ include block_html/_include.pug
 					.price__get.modal-get(data-modal="order") Заказать
 //.section.section-about(style="background-image:url('https://www.toptal.com/designers/subtlepatterns/patterns/ep_naturalblack.png)')")
 
-.section.section-about#about(style="background-image:url('https://www.toptal.com/designers/subtlepatterns/patterns/concrete-texture.png)')")
+.section.section-about#about(style="background-image:url('/img/concrete-texture.png')")
 	//.section.section-about
 	//.filter
 	.main-cont

@@ -169,14 +169,15 @@ $(document).ready(function(){
 
 	//fancy-box
 
-	$('.fancybox').fancybox({
+	$('.fancybox').fancybox();
+	$('.fancybox-gallary').fancybox({
 		thumbs : {
 			autoStart : true
 		},
 		buttons : [
 			'zoom',
 			'close'
-		]
+		],
 	});
 	//fancy-box === end
 
@@ -204,6 +205,7 @@ $(document).ready(function(){
 		autoplay: false,
 		speed: 500,
 		arrows: false,
+
 	});
 
 	$('.scheme-slider-control--right').click(function(){
@@ -219,6 +221,7 @@ $(document).ready(function(){
 		autoplay: false,
 		speed: 500,
 		arrows: false,
+		lazyLoad: 'ondemand',
 	});
 
 
