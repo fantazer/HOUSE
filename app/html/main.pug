@@ -1,20 +1,23 @@
 include block_html/_style.pug
 include block_html/_include.pug
 
-.header
-	.main-cont
-		.header-wrap
-			.logo
-				.logo__text Stand<span>Art</span>
+.header-cont
+	.header
+		.main-cont
+			.header-wrap
+				.logo
+					.logo__text Stand<span>Art</span>
 
-				img(src="img/logo-old.png", alt="").logo-img
-			.header-menu
-				a(href="#about" rel='m_PageScroll2id').header-el О нас
-				a(href="#works" rel='m_PageScroll2id').header-el Портфолио
-				a(href="#price" rel='m_PageScroll2id').header-el Цены
-				a(href="#contact" rel='m_PageScroll2id').header-el Контакты
-
-			a(href="tel:8(926)595-34-64").header-phone 8(926)595-34-64
+					img(src="img/logo-old.png", alt="").logo-img
+				.header-menu
+					.header-menu__wrap
+						a(href="#about" rel='m_PageScroll2id').header-el О нас
+						a(href="#works" rel='m_PageScroll2id').header-el Портфолио
+						a(href="#price" rel='m_PageScroll2id').header-el Цены
+						a(href="#contact" rel='m_PageScroll2id').header-el Контакты
+				a(href="tel:8(926)595-34-64").header-phone 8(926)595-34-64
+				.toggle-menu
+					+icon("menu","icon")
 .baner(style="background-image:url('img/bg-rulle.jpg')")
 	.filter--white
 	.main-cont
@@ -32,12 +35,36 @@ include block_html/_include.pug
 
 			//standart
 			.project__el
-				//.project-el__filter
+
+
 				.project__el-img-wrap
 					.project__el-slider
 						.project__el-img(style="background-image:url('img/pr1/pr-1-1.jpg')")
 						.project__el-img(style="background-image:url('img/pr1/pr-1-2.jpg')")
 						.project__el-img(style="background-image:url('img/pr1/pr-1-3.jpg')")
+					.project__el-descr
+						.project__el-wrap
+							.project__el-title
+								span Проект:
+								| Классический
+							.project__el-inf
+								.project__el-inf__el
+									.book-row
+										.book-row__title Площадь
+										.book-row__dot
+										.book-row__value 250 м <sup>2</sup>
+								.project__el-inf__el
+									.book-row
+										.book-row__title Комнат
+										.book-row__dot
+										.book-row__value 5
+								.project__el-inf__el
+									.book-row
+										.book-row__title Разработка
+										.book-row__dot
+										.book-row__value 1.5 мес
+							.project__el-get
+								.project__el-get-btn.modal-get(data-modal="order") Заказать
 					.scheme-slider-wrap
 						.scheme-slider-cont
 							.scheme-slider-control.scheme-slider-control--left
@@ -48,30 +75,40 @@ include block_html/_include.pug
 								- for (var i=1;i<5;i++)
 									a(href="img/pr1/pr-sch-1-" + i + ".jpg" data-fancybox="images-classic").fancybox.scheme-slider__el
 										img(src="img/pr1/pr-sch-1-" + i + "-min.jpg", alt="")
-					.project__el-descr
-						.project__el-wrap
-							.project__el-title Классический
-							.project__el-inf
-								.project__el-inf__el
-									.project__el-inf__name Площадь
-									.project__el-inf__val 250 м <sup>2</sup>
-								.project__el-inf__el
-									.project__el-inf__name Комнат
-									.project__el-inf__val 5
-								.project__el-inf__el
-									.project__el-inf__name Разработка
-									.project__el-inf__val 1.5 месяца
-						.project__el-get
-							.project__el-get-btn.modal-get(data-modal="order") Заказать
+
 
 			//rubl
 			.project__el
-				//.project-el__filter
+
+
 				.project__el-img-wrap
 					.project__el-slider
 						.project__el-img(style="background-image:url('img/wood/wood-1-1.jpg')")
 						.project__el-img(style="background-image:url('img/wood/wood-1-2.jpg')")
 						.project__el-img(style="background-image:url('img/wood/wood-1-3.jpg')")
+					.project__el-descr
+						.project__el-wrap
+							.project__el-title
+								span Проект:
+								| Рубленный
+							.project__el-inf
+								.project__el-inf__el
+									.book-row
+										.book-row__title Площадь
+										.book-row__dot
+										.book-row__value 300 м <sup>2</sup>
+								.project__el-inf__el
+									.book-row
+										.book-row__title Комнат
+										.book-row__dot
+										.book-row__value 7
+								.project__el-inf__el
+									.book-row
+										.book-row__title Разработка
+										.book-row__dot
+										.book-row__value 2 мес
+							.project__el-get
+								.project__el-get-btn.modal-get(data-modal="order") Заказать
 					.scheme-slider-wrap
 						.scheme-slider-cont
 							.scheme-slider-control.scheme-slider-control--left
@@ -82,29 +119,35 @@ include block_html/_include.pug
 								- for (var i=1;i<5;i++)
 									a(href="img/wood/wood-pr-1-" + i + ".jpg" data-fancybox="images-rubl").fancybox.scheme-slider__el
 										img(src="img/wood/wood-pr-1-" + i + "-min.jpg", alt="")
-					.project__el-descr
-						.project__el-wrap
-							.project__el-title Рубленный
-							.project__el-inf
-								.project__el-inf__el
-									.project__el-inf__name Площадь
-									.project__el-inf__val 300 м <sup>2</sup>
-								.project__el-inf__el
-									.project__el-inf__name Комнат
-									.project__el-inf__val 7
-								.project__el-inf__el
-									.project__el-inf__name Разработка
-									.project__el-inf__val 2 месяца
-						.project__el-get
-							.project__el-get-btn.modal-get(data-modal="order") Заказать
-
 			//Райта
 			.project__el
-				//.project-el__filter
 				.project__el-img-wrap
 					.project__el-slider
 						- for (var i=1;i<4;i++)
 							.project__el-img(style="background-image:url('img/raita/raita-1-" + i + ".jpg')")
+					.project__el-descr
+						.project__el-wrap
+							.project__el-title
+								span Проект:
+								| Райта
+							.project__el-inf
+								.project__el-inf__el
+									.book-row
+										.book-row__title Площадь
+										.book-row__dot
+										.book-row__value 300 м <sup>2</sup>
+								.project__el-inf__el
+									.book-row
+										.book-row__title Комнат
+										.book-row__dot
+										.book-row__value 7
+								.project__el-inf__el
+									.book-row
+										.book-row__title Разработка
+										.book-row__dot
+										.book-row__value 2 мес
+							.project__el-get
+								.project__el-get-btn.modal-get(data-modal="order") Заказать
 					.scheme-slider-wrap
 						.scheme-slider-cont
 							.scheme-slider-control.scheme-slider-control--left
@@ -115,28 +158,36 @@ include block_html/_include.pug
 								- for (var i=1;i<5;i++)
 									a(href="img/raita/raita-pr-1-" + i + ".jpg" data-fancybox="images-raita").fancybox.scheme-slider__el
 										img(src="img/raita/raita-pr-1-" + i + "-min.jpg", alt="")
-					.project__el-descr
-						.project__el-wrap
-							.project__el-title Райта
-							.project__el-inf
-								.project__el-inf__el
-									.project__el-inf__name Площадь
-									.project__el-inf__val 300 м <sup>2</sup>
-								.project__el-inf__el
-									.project__el-inf__name Комнат
-									.project__el-inf__val 7
-								.project__el-inf__el
-									.project__el-inf__name Разработка
-									.project__el-inf__val 2 месяца
-						.project__el-get
-							.project__el-get-btn.modal-get(data-modal="order") Заказать
 
 			//Бьерк
 			.project__el
-				//.project-el__filter
+
 				.project__el-img-wrap
 					.project__el-slider
 						.project__el-img(style="background-image:url('img/biork/biork-1.jpg')")
+					.project__el-descr
+						.project__el-wrap
+							.project__el-title
+								span Проект:
+								| Бьерк
+							.project__el-inf
+								.project__el-inf__el
+									.book-row
+										.book-row__title Площадь
+										.book-row__dot
+										.book-row__value 258 м <sup>2</sup>
+								.project__el-inf__el
+									.book-row
+										.book-row__title Комнат
+										.book-row__dot
+										.book-row__value 4
+								.project__el-inf__el
+									.book-row
+										.book-row__title Разработка
+										.book-row__dot
+										.book-row__value 1 мес
+							.project__el-get
+								.project__el-get-btn.modal-get(data-modal="order") Заказать
 					.scheme-slider-wrap
 						.scheme-slider-cont
 							.scheme-slider-control.scheme-slider-control--left
@@ -147,28 +198,34 @@ include block_html/_include.pug
 								- for (var i=1;i<5;i++)
 									a(href="img/biork/biork-pr-1-" + i + ".jpg" data-fancybox="images-biork").fancybox.scheme-slider__el
 										img(src="img/biork/biork-pr-1-" + i + "-min.jpg", alt="")
-					.project__el-descr
-						.project__el-wrap
-							.project__el-title Бьерк
-							.project__el-inf
-								.project__el-inf__el
-									.project__el-inf__name Площадь
-									.project__el-inf__val 258 м <sup>2</sup>
-								.project__el-inf__el
-									.project__el-inf__name Комнат
-									.project__el-inf__val 4
-								.project__el-inf__el
-									.project__el-inf__name Разработка
-									.project__el-inf__val 1 месяц
-						.project__el-get
-							.project__el-get-btn.modal-get(data-modal="order") Заказать
 			//Дизайн проект
 			.project__el
-				//.project-el__filter
 				.project__el-img-wrap
 					.project__el-slider
 						- for (var i=1;i<6;i++)
 							.project__el-img(style="background-image:url(img/design/design-el-" + i + ".jpg)")
+					.project__el-descr
+						.project__el-wrap
+							.project__el-title
+								span Дизайн проект
+							.project__el-inf
+								.project__el-inf__el
+									.book-row
+										.book-row__title Площадь
+										.book-row__dot
+										.book-row__value 50 м <sup>2</sup>
+								.project__el-inf__el
+									.book-row
+										.book-row__title Комнат
+										.book-row__dot
+										.book-row__value 2
+								.project__el-inf__el
+									.book-row
+										.book-row__title Разработка
+										.book-row__dot
+										.book-row__value 2 нед
+							.project__el-get
+								.project__el-get-btn.modal-get(data-modal="order") Заказать
 					.scheme-slider-wrap
 						.scheme-slider-cont
 							.scheme-slider-control.scheme-slider-control--left
@@ -179,21 +236,6 @@ include block_html/_include.pug
 								- for (var i=0;i<6;i++)
 									a(href="img/design/flat-" + i + ".jpg" data-fancybox="images-designproj").fancybox.scheme-slider__el
 										img(src="img/design/flat-" + i + ".jpg", alt="")
-					.project__el-descr
-						.project__el-wrap
-							.project__el-title Дизайн проект
-							.project__el-inf
-								.project__el-inf__el
-									.project__el-inf__name Площадь
-									.project__el-inf__val 50 м <sup>2</sup>
-								.project__el-inf__el
-									.project__el-inf__name Комнат
-									.project__el-inf__val 2
-								.project__el-inf__el
-									.project__el-inf__name Разработка
-									.project__el-inf__val 2 недели
-						.project__el-get
-							.project__el-get-btn.modal-get(data-modal="order") Заказать
 
 .section.section-service#arch
 	.main-cont

@@ -35,15 +35,20 @@ body
 	letter-spacing 0.01em
 
 .main-cont
-	center(1200px,10px)
+	center(1100px,10px)
 
-.header
+.header-cont
 	position: absolute
 	top 0
 	left: 0
 	width: 100%
-	z-index 10
+	z-index 250
+.header
+	width: 100%
+	position: relative
 .header-wrap
+	+below(1024px)
+		padding: 10px 0
 	position: relative
 	flex(between)
 	padding: 20px 0
@@ -58,7 +63,25 @@ body
 		color $red
 		margin-left: -10px
 
+.logo-img
+	+below(1024px)
+		display: none
+	width: 80%
+
 .header-menu
+	+below(1024px)
+		position: absolute
+		top 100%
+		left: -10px
+		width: calc(100% + 20px)
+		display: none
+		background: white
+		border-top:1px solid $border-color
+		border-bottom:1px solid $border-color
+		padding: 20px 0
+.header-menu__wrap
+	+below(1024px)
+		flex(mid)
 	f()
 
 .header-el
@@ -82,6 +105,10 @@ body
 			content ''
 			display: none
 .header-phone
+	+below(1024px)
+		margin-left: auto
+	+below(640px)
+		font-size: 14px
 	up()
 	font-size: 26px
 	font-weight: 400
@@ -93,6 +120,10 @@ body
 	.main-cont
 		height: 100%
 .baner-wrap
+	+below(1024px)
+		font-size: 10vw
+	+below(640px)
+		font-size: 34px
 	height: 100%
 	flex(mid)
 	fl()
@@ -103,6 +134,8 @@ body
 	up()
 	font-weight: 900
 .baner-text
+	+below(640px)
+		margin-top: -10%
 	//width: 70%
 	margin-top: 8%
 	margin-bottom: 30px
@@ -129,8 +162,13 @@ body
 	height: 100%
 	background: rgba(255, 255, 255, 0.8)
 .section
+	+below(768px)
+		padding: 30px 0
 	padding: 120px 0
 .section-title
+	+below(768px)
+		font-size: 24px
+		margin-bottom: 10px
 	text-align: center
 	font-weight: 900
 	font-size: 40px
@@ -138,10 +176,16 @@ body
 	up()
 
 .section-title-sub
+	+below(768px)
+		margin-bottom: 30px
 	text-align: center
 	margin-bottom: 90px
 
 .baner-text-sub
+	+below(768px)
+		width: 90%
+		font-size: 12px
+		text-transform: none
 	text-align: center
 	font-size: 14px
 	width: 60%
@@ -154,12 +198,16 @@ body
 	/*flex(between)
 	fw()*/
 .project__el
+	+below(768px)
+		margin-bottom: 20px
+	&:last-child
+		margin-bottom: 0
 	width: 100%
 	margin-bottom: 50px
 	cp()
 	tr(all)
 	position: relative
-	box-shadow 0px 2px 10px #c5c2c2
+	box-shadow 0px 2px 10px #e3e2e2
 
 
 .project-el__filter
@@ -176,26 +224,52 @@ body
 	position: relative
 
 .project__el-descr
-	position: absolute
-	top 0px
-	right: 0px
-	background: #ffffffd6
-	border-radius 0px 0 0 10px
-	overflow: hidden
-	min-width 300px
+	background: rgb(38, 42, 52)
+	color white
+	margin-top: -4px
 .project__el-title
-	font-size: 24px
-	padding-bottom: 20px
-	margin-bottom: 20px
-	border-bottom:2px solid #c60000
+	+below(1280px)
+		font-size: 16px
+	+below(1024px)
+		padding-left: 10px
+		font-size: 14px
+	+below(768px)
+		width: 100%
+		text-align: center
+		padding: 10px 0
+		flex(mid)
+		border-bottom:1px solid #535353
+	f()
+	align-items: center
+	font-size: 18px
 	font-weight:bold
-
+	padding-left: 20px
+	span
+		display: inline-block
+		margin-right: 10px
 .project__el-get
+	+below(640px)
+		width: 100%
 	flex(between)
 
+
+.project__el-inf__val
+	color #686868
+
 .project__el-wrap
-	padding: 40px
+	+below(768px)
+		fw()
+	f()
+	justify-content: space-between
 .project__el-get-btn
+	+below(1024px)
+		width: 150px
+	+below(768px)
+		width: 100px
+	+below(640px)
+		width: 100%
+		padding: 15px
+	width: 180px
 	&:first-child
 		border-right:1px solid $border-color
 		background: $red
@@ -205,7 +279,6 @@ body
 	tr(all)
 	padding: 20px
 	font-weight:bold
-	width: 100%
 	text-align: center
 	&:hover
 		background: lighten($red,10)
@@ -215,10 +288,18 @@ body
 	font-size: 14px
 	color black
 	font-weight:bold
+	margin-right: 20px
 
 .project__el-inf__el
+	+below(1280px)
+		padding: 0 10px
+	+below(640px)
+		padding: 10px 5px
 	flex(between)
-	margin-bottom: 10px
+	width: 100%
+	padding: 0 20px
+	border-left: 1px solid #535353
+	height: 100%
 .project-info
 	position: absolute
 	bottom 0
@@ -226,19 +307,35 @@ body
 	z-index 10
 	padding: 20px
 
+.project__el-inf
+	+below(1280px)
+		width: 50%
+	+below(768px)
+		width: calc(100% - 100px)
+	+below(640px)
+		width: 100%
+	flex(between)
+	width: 600px
+	margin-left: auto
 .project-el__title
 	up()
 	color white
 	margin-bottom: 10px
 	font-weight:700
 
+
+
 .project-el__text
 	color white
 
 .section-about
+	+below(768px)
+		padding: 50px 20px
 	position: relative
 	padding: 150px 0
 .about-title
+	+below(768px)
+		font-size: 28px
 	up()
 	margin-bottom: 40px
 	font-weight: 900
@@ -246,20 +343,31 @@ body
 	//color white
 
 .about-text
+	+below(768px)
+		width: 100%
+		margin-bottom: 0
 	//color white
 	line-height: 1.6
 	width: 70%
 	margin-bottom: 40px
 
 .advant
-	flex(between)
+	f()
+	justify-content: space-between
 	fw()
 .advant__el
+	+below(768px)
+		margin-bottom: 20px
+	+below(640px)
+		width: 49%
 	width: 24%
 	margin-bottom: 80px
-	flex(mid)
+	f()
+	align-items: center
 	fl()
 .advant__el-icon
+	+below(768px)
+		size 80px
 	flex(mid)
 	round()
 	size 140px
@@ -268,6 +376,8 @@ body
 	background: $yellow
 	box-shadow 0px 3px 9px #d4d2d2
 	.icon
+		+below(768px)
+			size 30px
 		size 60px
 		fill black
 .advant__el-text
@@ -311,15 +421,25 @@ body
 
 
 .price
+	+below(768px)
+		center(480px,0)
+		fw()
 	f()
 	justify-content: space-between
 .price__el
+	+below(1024px)
+		width: 32%
+	+below(768px)
+		width: 100%
+		margin-bottom: 20px
 	width: 31%
 	padding: 40px 20px
 	border 1px solid $border-color
 	br(10px)
 	padding-right: 10px
 .price__title
+	+below(1024px)
+		font-size: 16px
 	text-align: center
 	font-size: 24px
 	margin-bottom: 20px
@@ -331,6 +451,8 @@ body
 	text-align: center
 	margin-bottom: 20px
 	span
+		+below(1024px)
+			font-size: 28px
 		font-size: 38px
 		display: inline-block
 		margin: 0 10px
@@ -353,10 +475,15 @@ body
 		margin: 0 20px
 
 .scheme-slider__el
+	+below(640px)
+		img
+			width: 100%
 	//padding: 50%
 	bg-full()
 
 .scheme-slider-wrap
+	+below(640px)
+		padding: 10px 0
 	padding: 20px
 	background: white
 
@@ -365,6 +492,8 @@ body
 	z-index 20
 
 .scheme-slider-control
+	+below(640px)
+		size 30px
 	round()
 	flex(mid)
 	tr(all)
@@ -374,36 +503,58 @@ body
 	top 50%
 	margin-top: -20px
 	box-shadow 0px 2px 10px #c5c2c2
+	z-index 200
 	&:hover
 		background: $red
 		.icon
 			fill white
 	.icon
+		+below(640px)
+			size 10px
 		size 14px
 .scheme-slider-control--left
+	+below(1280px)
+		left: 0px
 	left -40px
 .scheme-slider-control--right
+	+below(1280px)
+		right: 0
 	right -40px
 
 .project__el-img-wrap
 	position: relative
 
 .section-service
+	+below(768px)
+		padding-bottom: 0
+		.main-cont
+			center(640px,10px)
 	padding-top: 40px
 .service-title
+	+below(768px)
+		font-size: 16px
+		line-height: 1.6
+		margin-bottom: 20px
 	font-weight: 900
 	font-size: 28px
 	up()
 	margin-bottom: 40px
 .service
+	+below(768px)
+		fw()
 	f()
 	justify-content: space-between
 .service-content
+	+below(768px)
+		width: 100%
+		margin-bottom: 20px
 	width: 70%
 .slider-wrap
 	position: relative
 	margin-bottom: 20px
 .slider-control
+	+below(640px)
+		size 30px
 	round()
 	flex(mid)
 	tr(all)
@@ -420,10 +571,16 @@ body
 		.icon
 			fill white
 	.icon
+		+below(640px)
+			size 10px
 		size 14px
 .slider-control--left
+	+below(768px)
+		left: 0
 	left -20px
 .slider-control--right
+	+below(768px)
+		right: 0
 	right -20px
 
 //.slider-control
@@ -436,6 +593,8 @@ body
 .service-text
 	line-height: 1.6
 .service-list
+	+below(768px)
+		width: 100%
 	width: 27%
 	.price__el
 		width: 100%
@@ -532,6 +691,8 @@ body
 
 
 .section-contact
+	+below(768px)
+		padding-bottom: 20px
 	background #efefef
 	padding-bottom:40px
 
@@ -546,6 +707,7 @@ body
 .contact-form--footer
 	+below(768px)
 		fw()
+		center(480px,0)
 		margin-top 30px
 	center(850px,0px)
 	flex(between)
@@ -832,6 +994,8 @@ body
 	height: 500px
 
 .contact-form__coner
+	+below(768px)
+		display: none
 	size 20px
 	background: $yellow
 	transform rotate(45deg)
@@ -840,6 +1004,8 @@ body
 	right: -10px
 
 .price-info
+	+below(768px)
+		margin-top: 0
 	center(800px,0)
 	br(20px)
 	padding: 20px
@@ -862,6 +1028,12 @@ body
 	font-weight: bold
 
 .logo__text
+	+below(1024px)
+		display: block
+	+below(768px)
+		font-size: 20px
+	+below(640px)
+		font-size: 14px
 	font-weight: 900
 	font-size: 32px
 	display: none
@@ -884,3 +1056,36 @@ body
 		display: block
 	.logo-img
 		display: none
+
+.toggle-menu
+	+below(1024px)
+		display: block
+	display: none
+	margin-left: 10px
+	.icon
+		+below(640px)
+			size 20px
+		size 25px
+
+.book-row__title
+	+below(1280px)
+		font-size: 12px
+	+below(640px)
+		font-size: 10px
+	@extend .project__el-inf__name
+	display table-cell
+	white-space nowrap
+	color white
+.book-row__dot
+	display table-cell
+	border-bottom 1px dotted gray
+	width 100%
+.book-row__value
+	+below(1280px)
+		font-size: 12px
+	+below(640px)
+		font-size: 10px
+	@extend .project__el-inf__val
+	color #e0e0e0
+	display table-cell
+	white-space nowrap

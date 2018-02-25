@@ -11,6 +11,19 @@
 
 $(document).ready(function(){
 
+	//toggle-menu
+	$(".toggle-menu").click(function(event){
+				event.stopPropagation();
+				$(".header-menu").slideToggle("fast");
+		});
+		$(".header-menu").on("click", function (event) {
+			event.stopPropagation();
+		});
+		$(document).on("click", function () {
+				$(".header-menu").hide();
+		});
+	//toggle-menu===end
+
 	//animate header
 	var shrinkHeader = 250;
 	var heightHeader=$('.header').height();
@@ -169,7 +182,8 @@ $(document).ready(function(){
 
 	//fancy-box
 
-	$('.fancybox').fancybox({
+	$('.fancybox').fancybox();
+	$('.fancybox-gallary').fancybox({
 		thumbs : {
 			autoStart : true
 		},
@@ -204,6 +218,32 @@ $(document).ready(function(){
 		autoplay: false,
 		speed: 500,
 		arrows: false,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					arrows: false,
+					centerPadding: '20px',
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 640,
+				settings: {
+					arrows: false,
+					centerPadding: '20px',
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					arrows: false,
+					centerPadding: '10px',
+					slidesToShow: 1
+				}
+			}
+  ]
 	});
 
 	$('.scheme-slider-control--right').click(function(){
@@ -219,6 +259,7 @@ $(document).ready(function(){
 		autoplay: false,
 		speed: 500,
 		arrows: false,
+		lazyLoad: 'ondemand',
 	});
 
 
