@@ -69,6 +69,8 @@ body
 	width: 80%
 
 .header-menu
+	+above(1025px)
+		display: block !important
 	+below(1024px)
 		position: absolute
 		top 100%
@@ -344,11 +346,9 @@ body
 
 .about-text
 	+below(768px)
-		width: 100%
 		margin-bottom: 0
 	//color white
 	line-height: 1.6
-	width: 70%
 	margin-bottom: 40px
 
 .advant
@@ -457,8 +457,7 @@ body
 		display: inline-block
 		margin: 0 10px
 
-.price__list
-	margin-bottom: 40px
+
 
 .price__list-el
 	padding: 10px 0
@@ -629,9 +628,13 @@ body
 	padding-top: 20px
 
 .price__list
+	+below(768px)
+		height: auto !important
 	position: relative
 	height: 300px
 	padding-right: 30px
+	margin-bottom: 40px
+
 .ps__scrollbar-y-rail
 	background-color #eaeaea !important
 	opacity 1!important

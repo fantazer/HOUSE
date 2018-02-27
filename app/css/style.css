@@ -970,6 +970,11 @@ body {
     display: none;
   }
 }
+@media only screen and (min-width: 1025px) {
+  .header-menu {
+    display: block !important;
+  }
+}
 @media only screen and (max-width: 1024px) {
   .header-menu {
     position: absolute;
@@ -1447,12 +1452,10 @@ body {
 }
 .about-text {
   line-height: 1.6;
-  width: 70%;
   margin-bottom: 40px;
 }
 @media only screen and (max-width: 768px) {
   .about-text {
-    width: 100%;
     margin-bottom: 0;
   }
 }
@@ -1684,9 +1687,6 @@ body {
   .price__val span {
     font-size: 28px;
   }
-}
-.price__list {
-  margin-bottom: 40px;
 }
 .price__list-el {
   padding: 10px 0;
@@ -1991,6 +1991,12 @@ body {
   position: relative;
   height: 300px;
   padding-right: 30px;
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 768px) {
+  .price__list {
+    height: auto !important;
+  }
 }
 .ps__scrollbar-y-rail {
   background-color: #eaeaea !important;

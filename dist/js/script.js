@@ -1,4 +1,24 @@
-(function($){
+
+
+$(document).ready(function(){
+
+	//toggle-menu
+	var hideToggle = function(targetClick,toggleEl) {
+		$(targetClick).click(function(event){
+				event.stopPropagation();
+				$(toggleEl).slideToggle("fast");
+		});
+	/*	$(toggleEl).on("click", function (event) {
+			event.stopPropagation();
+		});*/
+		$(document).on("click", function () {
+				$(toggleEl).hide();
+		});
+	}
+	hideToggle('.toggle-menu','.header-menu');
+	//toggle-menu===end
+
+	(function($){
     $(window).load(function(){
         $("a[rel='m_PageScroll2id']").mPageScroll2id({
 				    highlightClass:"left-nav-el-active",
@@ -8,21 +28,6 @@
 				});
     });
  })(jQuery);
-
-$(document).ready(function(){
-
-	//toggle-menu
-	$(".toggle-menu").click(function(event){
-				event.stopPropagation();
-				$(".header-menu").slideToggle("fast");
-		});
-		$(".header-menu").on("click", function (event) {
-			event.stopPropagation();
-		});
-		$(document).on("click", function () {
-				$(".header-menu").hide();
-		});
-	//toggle-menu===end
 
 	//animate header
 	var shrinkHeader = 250;
@@ -360,6 +365,8 @@ $(document).ready(function(){
 	hideToggle('.icon-bars','.top-menu_link');*/
 
 })
+
+
 
 //cash SVG
 
