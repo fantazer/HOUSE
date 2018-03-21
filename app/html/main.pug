@@ -15,7 +15,8 @@ include block_html/_include.pug
 						a(href="#works" rel='m_PageScroll2id').header-el Портфолио
 						a(href="#price" rel='m_PageScroll2id').header-el Цены
 						a(href="#contact" rel='m_PageScroll2id').header-el Контакты
-				a(href="tel:8(926)595-34-64").header-phone 8(926)595-34-64
+				span.call_phone_2
+					a(href="tel:").header-phone
 				.toggle-menu
 					+icon("menu","icon")
 .baner(style="background-image:url('img/bg-rulle.jpg')")
@@ -237,6 +238,48 @@ include block_html/_include.pug
 									a(href="img/design/flat-" + i + ".jpg" data-fancybox="images-designproj").fancybox.scheme-slider__el
 										img(src="img/design/flat-" + i + ".jpg", alt="")
 
+.section.section-service#ep
+	.main-cont
+		.service-title Комплект чертежей эскизного проекта
+		.service
+			.service-content
+				.slider-wrap
+					.slider-control.slider-control--left
+						+icon("arrow-left","icon")
+					.slider-control.slider-control--right
+						+icon("arrow-right","icon")
+					.slider-item.service-slider
+						- for (var i=1;i<6;i++)
+							a(href="img/ep/shale-ep-el-" + i + ".jpg" data-fancybox="images-ep" ).service-slider__el.fancybox-gallary
+								img(data-lazy="img/ep/shale-ep-el-" + i + ".jpg" , alt="")
+				.service-text Работа начинается с составления Технического задания.На этом этапе заказчик формулирует свои пожелания к будущему дому.Далее выполняется эскизный проект(ЭП),на котором уже можно увидеть внешний вид и планировки дома.Здесь очень важна совместная работа архитектора и заказчика,так как эзкизный проект воплощает слова и желания в констрктивную форму.ЭП является техническим заданием для Архитектурного раздела проекта(АР).
+
+			.service-list
+				.service-price
+					.service-price__title Цена услуги
+					//.price__img
+						img(src="img/service-2.jpg", alt="")
+					.service-price__val от
+						span 300
+						| руб/м<sup>2</sup>
+				.price__el
+					.price__title Список листов
+					.price__list
+						.price__list-el  Генплан участка с привязанным домом
+						.price__list-el  Фасады дома
+						.price__list-el  Подробный план кровли.
+						.price__list-el  Маркировочный план этажей
+						.price__list-el  Планы этажей 3d
+						.price__list-el  Чертеж и ведомость оконных и дверных проемов.
+						.price__list-el  Цветовые решения фасадов
+						.price__list-el  Характерный разрез дома со всеми высотными отметками.
+						.price__list-el  3D визуализация
+						.price__list-el  Архитектурное решение лестницы
+						.price__list-el  Фасады дома с узлами и фрагментами.
+						.price__list-el  Ведомость материалов
+						.price__list-el  Консультация по выбору технологий строительства дома
+					.price__get.modal-get(data-modal="order") Заказать
+
 .section.section-service#arch
 	.main-cont
 		.service-title Комплект чертежей архитектурного раздела проекта
@@ -248,10 +291,10 @@ include block_html/_include.pug
 					.slider-control.slider-control--right
 						+icon("arrow-right","icon")
 					.slider-item.service-slider
-						- for (var i=1;i<24;i++)
+						- for (var i=1;i<19;i++)
 							a(href="img/ar/shale-ar-el-" + i + ".jpg" data-fancybox="images-arh" ).service-slider__el.fancybox-gallary
 								img(data-lazy="img/ar/shale-ar-el-" + i + ".jpg" , alt="")
-				.service-text Работа начинается с составления Технического задания.На этом этапе заказчик формулирует свои пожелания к будущему дому.Далее выполняется эскизный проект(ЭП),на котором уже можно увидеть внешний вид и планировки дома.Здесь очень важна совместная работа архитектора и заказчика,так как эзкизный проект воплощает слова и желания в констрктивную форму.ЭП является техническим заданием для Архитектурного раздела проекта(АР),где уже детально прорабатываются все детали,формируются материалы и пироги конструкций,подбираются цветовые решения и отделка.
+				.service-text В Архитектурном разделе проекта(АР),красивая картинка из эскиза превращается  в строительный объект.На  этапе АР, прорабатываются все детали,формируются материалы и пироги конструкций,подбираются цветовые решения и отделка.Все последующие разделы,будут основываться на данных чертежах.
 
 			.service-list
 				.service-price
@@ -259,10 +302,10 @@ include block_html/_include.pug
 					//.price__img
 						img(src="img/service-2.jpg", alt="")
 					.service-price__val от
-						span 500
+						span 250
 						| руб/м<sup>2</sup>
 				.price__el
-					.price__title Список работ
+					.price__title Список листов
 					.price__list
 						.price__list-el  Генплан участка с привязанным домом
 						.price__list-el  Фасады дома
@@ -299,11 +342,13 @@ include block_html/_include.pug
 					.service-price__title Цена услуги
 					//.price__img
 						img(src="img/service-2.jpg", alt="")
-					.service-price__val от
+					.service-price__val.service-price__val--range от
+						span 250
+						span.divider -
 						span 500
 						| руб/м<sup>2</sup>
 				.price__el
-					.price__title Список работ
+					.price__title Список листов
 					.price__list
 						.price__list-el Кладочный планы этажей
 						.price__list-el Общие данные о проекте, строительных материалах, планировочных решениях.
@@ -353,7 +398,7 @@ include block_html/_include.pug
 						span 500
 						| руб/м<sup>2</sup>
 				.price__el
-					.price__title Список работ
+					.price__title Список листов
 					.price__list
 						-
 							var items = [
@@ -518,11 +563,36 @@ include block_html/_include.pug
 		.section-title Цены на наши услуги
 		.section-title-sub Наши цены самые конкурентные на рынке
 		.price
+
+			.price__el
+				.price__title Эскизный раздел <br> проекта
+				.price__val от
+					span 300
+					| руб
+				.price__list
+					.price__list-el  Генплан участка с привязанным домом
+					.price__list-el  Фасады дома
+					.price__list-el  Подробный план кровли.
+					.price__list-el  Маркировочный план этажей
+					.price__list-el  Планы этажей 3d
+					.price__list-el  Чертеж и ведомость оконных и дверных проемов.
+					.price__list-el  Цветовые решения фасадов
+					.price__list-el  Характерный разрез дома со всеми высотными отметками.
+					.price__list-el  3D визуализация
+					.price__list-el  Архитектурное решение лестницы
+					.price__list-el  Фасады дома с узлами и фрагментами.
+					.price__list-el  Ведомость материалов
+					.price__list-el  Консультация по выбору технологий строительства дома
+				.price__get.modal-get(data-modal="order") Заказать
+				a(href="#ep" rel='m_PageScroll2id').price-more
+					.price-more__icon
+						+icon("eye","icon")
+					.price-more__text Пример отчета
+
 			.price__el
 				.price__title Архитектурный раздел <br> проекта
-
 				.price__val от
-					span 500
+					span 250
 					| руб
 				.price__list
 					.price__list-el  Генплан участка с привязанным домом
@@ -543,10 +613,15 @@ include block_html/_include.pug
 					.price-more__icon
 						+icon("eye","icon")
 					.price-more__text Пример отчета
+
+
+
 			.price__el
 				.price__title Конструкторский раздел <br> проекта
 
 				.price__val от
+					span 250
+					span.divider -
 					span 500
 					| руб
 				.price__list
@@ -639,11 +714,11 @@ include block_html/_include.pug
 							.contact-row
 								.contact-icon
 									+icon("placeholder","icon")
-								.contact-text 111674, г. Россия, Москва, 1-я Вольская ул., дом 12, оф. 18
+								.contact-text г. Москва, ул. Варшавское шоссе, д 125
 							.contact-row
 								.contact-icon
 									+icon("phone-call","icon")
-								.contact-text +7(926)595-34-64
+								.contact-text.call_phone_3
 							.contact-row
 								.contact-icon
 									+icon("mail","icon")
@@ -651,7 +726,7 @@ include block_html/_include.pug
 	//section-contact-end
 
 .footer-map
-	script( type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A14f0de0a8ff462ffc8d6a24602870af9583a6d59f9099130c4d12b391594ee7e&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true")
+	script( type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=wkF1GhSDg4kZ3hDsyV_PPciU2OtbJsK4&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false")
 
 
 	.scroll-up

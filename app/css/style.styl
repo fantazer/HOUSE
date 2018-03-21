@@ -423,16 +423,15 @@ body
 .price
 	+below(768px)
 		center(480px,0)
-		fw()
 	f()
+	fw()
 	justify-content: space-between
 .price__el
-	+below(1024px)
-		width: 32%
 	+below(768px)
 		width: 100%
 		margin-bottom: 20px
-	width: 31%
+	width: 48%
+	margin-bottom: 40px
 	padding: 40px 20px
 	border 1px solid $border-color
 	br(10px)
@@ -1092,3 +1091,12 @@ body
 	color #e0e0e0
 	display table-cell
 	white-space nowrap
+
+.service-price__val--range
+	font-size: 13px
+	span
+		font-size: 30px
+
+.divider
+	line-height: 1.6
+	margin: 0 !important
